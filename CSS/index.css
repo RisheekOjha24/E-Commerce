@@ -1,7 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Righteous&family=Special+Elite&display=swap');
+
 *{
     margin:0;
     padding:0;
-    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  
 }
 html,body
 {
@@ -12,22 +17,80 @@ html,body
 
 /* Navbar styling starts from here */
 
-.logo_1
-{
-    width:160px;
-    height:16px;
-    position: relative;
-    left:80px;
-    top:30px;
+.main1{
+
+    height: 90vh;
+    background-color: oldlace;
+}
+.navbar{
+
+    height:16vh;
+    align-items: center;
+    /* background-color: rgb(82, 223, 236); */
+    display: flex;
+    justify-content:space-between;
+    background-color: darksalmon;
+}
+ /* logoA styling */
+.logo_1{
+
+    width:150px;
+    height:18px;
+    position: absolute;
+    left:50px;
+    top:35px;
     filter: brightness(80%);
 }
-.logo_2
-{
-    width:80px;
-    height:60px;
-    top:16px;
-    left:68px;
+.logo_2{
+ 
+    width:60px;
+    height:40px;
+    top:26px;
+    left:20px;
     position: absolute;
     transform: rotateZ(deg) ;
     filter: brightness(1.2) opacity(0.8) ;
+}
+
+    /* nav-items styling */
+
+.nav_items{
+    display: flex;
+    padding-left: 2rem;
+    gap:38px;
+    margin-right:1rem;
+    margin-left: 3rem;
+}
+.nav_items>li{
+
+padding: 10px;
+}
+.nav_items>li>a
+{
+    color: black;
+    font-size: 18px;
+    font-family: 'Righteous','Montserrat';
+    letter-spacing: 1.5px;
+    
+}
+
+/* logoB styling */
+.logoB{
+    box-sizing: border-box;
+    padding-right:1rem; 
+
+}
+.logo_3{
+
+    width:35px;
+    height:32px;
+    filter: brightness(70%) contrast(5);
+    padding: 0 2rem 0.4rem 0;
+}
+
+.logo_4{
+
+    width:40px;
+    height:40px;
+    padding: 1px;
 }
