@@ -1,12 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Righteous&family=Special+Elite&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Playpen+Sans&display=swap');
 *{
     margin:0;
     padding:0;
     list-style: none;
     text-decoration: none;
-  
+    background-color:#F0FCF3 ;
 }
 html,body
 {
@@ -39,17 +39,7 @@ html,body
     position: absolute;
     left:50px;
     top:35px;
-    filter: brightness(80%);
-}
-.logo_2{
- 
-    width:60px;
-    height:40px;
-    top:26px;
-    left:20px;
-    position: absolute;
-    transform: rotateZ(deg) ;
-    filter: brightness(1.2) opacity(0.8) ;
+    
 }
 
     /* nav-items styling */
@@ -59,7 +49,7 @@ html,body
     padding-left: 2rem;
     gap:38px;
     margin-right:1rem;
-    margin-left: 3rem;
+    margin-left: 6rem;
 }
 .nav_items>li{
 
@@ -78,21 +68,26 @@ padding: 10px;
 .logoB{
     box-sizing: border-box;
     padding-right:1rem; 
-
+    
 }
 .logo_3{
 
-    width:35px;
-    height:32px;
-    filter: brightness(70%) contrast(5);
-    padding: 0 2rem 0.4rem 0;
+    width:48px;
+    height:45px;
+    padding-right: 2rem;
+    padding-left: 1rem;
+    background-color: #F0FCF3;
 }
 
 .logo_4{
 
-    width:40px;
-    height:40px;
+    width:30px;
+    height:30px;
     padding: 1px;
+    background-color: #F0FCF3;
+    margin-bottom: 4px;
+    border-radius: 10px;
+ 
 }
 
 /* Navbar styling finished */
@@ -106,11 +101,16 @@ padding: 10px;
 }
 .navdown1{
 
-background-color: coral;
-width: 50%;
+    /* background-color: coral; */
+    width: 50%;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
 }
 .navdown2{
+
     background-color: khaki;
     width: 50%;
 }
@@ -119,5 +119,90 @@ width: 50%;
     width:100%;
     height:100%;
     float: right;
-  
+    
 }
+/* navdown1 inside styling */
+.downbox{
+    background-color:#F0FCF3;
+    width: 90%;
+    height: auto;
+}
+.downbox h1{
+    font-size: 40px;
+    text-align:start;
+    word-spacing: 8px;
+    line-height: 1.4;
+    font-family: 'Playpen Sans';
+    text-align: left;
+}
+.downbox h1 span{
+    color: rgb(25, 250, 85);
+    text-shadow: 2px 1px 2px #b4c1c1;
+    font-family: 'Charm';
+    font-style: italic;
+    letter-spacing: -2px;
+    font-weight: lighter;
+    font-size: 45px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.downbox h1::after{
+    content: "Discover a world of gardening and home decor delights in one place";
+    display: block;
+    padding-top: 40px;
+    font-family: cursive;
+    font-weight: lighter;
+    font-size: 20px;
+    text-align: left ;
+    padding-bottom: 5rem;
+    background-color: #F0FCF3;
+}
+.downbox h1::first-letter{
+    font-size: 55px;
+    color: rgb(11, 107, 60);
+}
+.down-button{
+    color:rgb(17, 176, 20);;
+    /* background-color: rgb(17, 176, 20); */
+    border: 2px solid  rgb(17, 176, 20);
+    padding: 10px 20px 10px 20px;
+    border-radius: 40px; 
+    font-size: 16px;
+    font-weight: bolder;
+    display: inline-block;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 rgb(17, 176, 20);
+    transition: ease-in-out 0.4s;
+    margin-bottom: 4rem;
+    float: left;
+  }
+  .down-button:hover {
+    box-shadow: inset 400px 0 0 0 rgb(17, 176, 20);
+    border-radius: 0px; 
+    color: white;
+  }  
+  .down-button:active{
+    box-shadow: inset 400px 0 0 0 rgb(16, 159, 18);
+    transform: scale(0.98);
+    transition-duration: 1ms;
+  }
+
+@media (max-width:900px) {
+     .navdown{
+        flex-direction: column;
+    } 
+    .navdown1{
+        width: 90%;
+    }
+    .navdown2{
+
+        width: 100%;
+    }
+     
+    .nav_items{
+        display: none;
+    }
+}
+
