@@ -12,15 +12,15 @@ html,body
 {
     width:100%;
     height:100%;
-    
+    /* background-color: #F0FCF3; */
 }
 
 /* Navbar styling starts from here */
 
 .main1{
 
-    height: 90vh;
-    background-color: oldlace;
+    /* height: 90vh; */
+
 }
 .navbar{
 
@@ -29,7 +29,7 @@ html,body
     /* background-color: rgb(82, 223, 236); */
     display: flex;
     justify-content:space-between;
-    background-color: darksalmon;
+    background-color: #F0FCF3;
 }
  /* logoA styling */
 .logo_1{
@@ -93,4 +93,31 @@ padding: 10px;
     width:40px;
     height:40px;
     padding: 1px;
+}
+
+/* Navbar styling finished */
+
+/* navdown styling begins */
+.navdown{
+    /* background-color: turquoise; */
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.navdown1{
+
+background-color: coral;
+width: 50%;
+
+}
+.navdown2{
+    background-color: khaki;
+    width: 50%;
+}
+.head_plant{
+
+    width:100%;
+    height:100%;
+    float: right;
+  
 }
