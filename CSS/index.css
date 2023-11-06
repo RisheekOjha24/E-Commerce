@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Righteous&family=Special+Elite&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Playpen+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Edu+TAS+Beginner&family=Playpen+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Homemade+Apple&family=Epilogue:wght@900&family=Merienda:wght@500&display=swap');
 *{
     margin:0;
@@ -27,11 +27,13 @@ html,body
 .navbar{
 
     height:16vh;
-    align-items: center;
+   
     /* background-color: rgb(82, 223, 236); */
     display: flex;
     justify-content:space-between;
+    align-items: center;
     background-color: #F0FCF3;
+
 }
  /* logoA styling */
 .logo_1{
@@ -39,8 +41,8 @@ html,body
     width:150px;
     height:18px;
     position: absolute;
-    left:50px;
-    top:35px;
+    left:40px;
+    top:40px;
     
 }
 
@@ -49,9 +51,10 @@ html,body
 .nav_items{
     display: flex;
     padding-left: 2rem;
-    gap:38px;
+    gap:4px;
     margin-right:1rem;
-    margin-left: 6rem;
+    margin-left: 8rem;
+    /* background-color: #b4c1c1; */
 }
 .nav_items>li{
 
@@ -63,6 +66,21 @@ padding: 10px;
     font-size: 18px;
     font-family: 'Righteous','Montserrat';
     letter-spacing: 1.5px;
+    padding: 16px;
+    transition: 0.2s ease-in-out;
+}
+.nav_items>li>a.act{
+    color:white;
+}
+.nav_items>li>a:hover,.act
+{
+    background-color: rgba(43, 176, 31, 0.811);
+    border-radius:100px 5px 100px  ;
+    box-shadow: 6px 5px 2px  rgba(39, 148, 198, 0.55);
+    
+    background-image: url('../images/navleaf.jpg'); /* Change background image on hover */
+    background-size: cover;
+    color: white;
     
 }
 
@@ -133,7 +151,7 @@ padding: 10px;
     word-spacing: 8px;
     line-height: 1.4;
     font-weight: bolder;
-    font-family: 'Epilogue';
+    font-family: 'Belanosima';
     text-align: left;
     word-spacing: 20px;
 }
@@ -161,8 +179,9 @@ padding: 10px;
     background-color: #F0FCF3;
 }
 .downbox h1::first-letter{
-    font-size: 55px;
-    color: rgb(11, 107, 60);
+    font-size: 60px;
+
+
 }
 .down-button{
     color:rgb(17, 176, 20);;
@@ -193,26 +212,84 @@ padding: 10px;
 
 /* navdown inside styling ends */
 
+/* Menu and cross styling of navbar */
+.ham{
+    width:40px; 
+    height:40px;
+    display: none;
+}
+.cross{
+    width:40px; 
+    height:40px;
+    display: none;
+    position: fixed;
+    right: 0;
+    z-index: 4;
+}
+
 /* media query for section main-1 starts */
 
-@media (max-width:900px) {
-     .navdown{
+@media (max-width:1000px) {
+    .nav_items{
+        
         flex-direction: column;
-    } 
+        gap: 40px;
+        align-items:flex-start;
+        justify-content: flex-start;
+        padding:10rem 40px 0px 20px;
+        position: fixed;
+        top:0;
+        right:-30rem;
+        margin:0;
+        height: 100vh;
+        width: 300px;
+        z-index: 2;
+        background: linear-gradient(200deg, rgb(228, 223, 223) 1%, #3ffbb3 78%,rgba(145, 219, 80, 0.616) 45%);
+        border-radius: 40px 0 0 0;
+        box-shadow: 0px 20px 40px rgba(16, 159, 18, 0.858);
+        transition: 0.5s ease-in-out;
+
+    }
+
+    .ham{
+        display: inline-block;
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+    .cross{
+        display: none;
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+
     .navdown1{
         width: 90%;
     }
     .navdown2{
 
         width: 100%;
+        
+        margin-left: 2.5rem;
     }
      
-    .nav_items{
-        display: none;
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+
+        .navdown2{
+            width:96%;
+            margin-left: 8rem;
+        }
+}
+@media (max-width: 420px){
+    .logo_1{
+        width:120px;
+        height:18px;
+        top:45px;
+        left: 10px;
     }
 }
 
-/* to be coninued */
+
 
 /* media query section main-1 ends */
 
@@ -278,7 +355,7 @@ padding: 10px;
     width: 200px;
 
     /* border: 2px solid black; */
-    border-radius: 100px 100px 0 0;
+    border-radius: 100px 100px 20px 20px;
 }
 .item-btn{
     position: relative;
