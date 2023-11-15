@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Gabarito:wght@700&family=Zen+Dots&family=Homemade+Apple&family=Epilogue:wght@900&family=Merienda:wght@500&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+
+    height:100%;
+    width: 100%;
+}
+
+
+.single-product{
+        
+        display: flex;
+        background-color: #216031;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-left: 2rem;
+    }
+
+.spart-1{
+    
+    margin-left: 2rem;
+    
+}
+.main-img{
+
+    height:27rem;
+    width:28rem;
+    background-color: aliceblue;
+    margin-right: 2rem;
+
+    border: 6px double rgb(155, 80, 52);
+
+}
+.main-img>img{
+    width:100%;
+    height:100%;
+}
+
+.small-img-box{
+   
+    margin: 2rem 4rem;
+    padding: 10px;
+    height:80px;
+    background-color: white;
+    display: flex;
+    gap: 10px;
+   
+    justify-content:space-between;
+}
+.small-img-box a{
+
+    flex: 1;
+    border: 1px solid black;
+    border: 1px solid black;
+    
+}
+
+.small-img{
+
+    width:100%;
+    height:100%;
+
+}
+
+.spart-2{
+    margin-left: 1rem;
+    
+}
+.pname{
+    margin:20px 2px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+.price-tag{
+    white-space: nowrap;
+    margin-right: 1rem;
+}
+.price-tag-item{
+    display: inline-block;
+    margin: 10px;
+    font-size: 25px;
+    font-family: 'Merienda';
+   
+}
+.ptag3{
+    padding:10px;
+    font-size: 20px;
+    font-family: 'Epilogue';
+    color: white;
+    background-color: cadetblue;
+    border-radius: 10px;
+    
+}
+
+.quantity{
+    white-space: nowrap;
+}
+#minus{
+        border-radius: 50%;
+        width:45px;
+        height:45px;
+        
+    }
+    #minus:hover{
+        filter: invert() brightness(2);
+    }
+    #num{
+       width: 60px;
+       height: 40px;
+       margin: 1.6rem;
+       font-size: 16px;
+       text-align: center;
+       border-radius:100px 5px 100px  ;
+       background:url(../images/navleaf.jpg);
+    
+       color: white;
+       font-family:Tahoma;
+        font-weight: bold;
+       filter:  contrast(2);
+       box-shadow: 2px 2px 4px rgb(114, 129, 114);
+    }
+    #plus{
+        border-radius: 50%;
+        width:45px;
+        height:45px;
+    }
+    #plus:hover{
+        border-radius: 50%;
+       
+        filter: invert() brightness(2);
+    }
+
+.cart{
+    margin: 2rem 1rem;
+    padding: 8px 40px;
+    border-radius: 20px;
+    text-align: center;
+    font-family:'Merienda';
+    word-spacing: 4px;
+    font-weight: bolder;
+    white-space: nowrap;
+}
+.cart:hover{
+    background-color: rgb(31, 192, 184);
+
+}
+
+.about-product{
+    padding: 1rem;
+   
+}
+
+.about-product h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+    text-decoration:underline;
+    font-weight: bolder;
+}
+.about-product p{
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: 'Gabarito';
+}
+
+/* media queries */
+@media (max-width: 870px){
+
+    .single-product {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .spart-2{
+        text-align: center;
+    }
+}
+@media (max-width: 570px){
+
+    .main-img{
+        width:90%;
+        height: 80%;
+    }
+    .spart-1{
+        margin: 0;
+    }
+    .spart-2{
+        margin: 0;
+    }
+    .small-img-box{
+        display: none;
+    }
+
+}
+@media (min-width: 1280px){
+
+.pname{
+    font-size: 3vw;
+}
+.ptag1,.ptag2,.ptag3,.about-product>h1{
+    font-size: 2vw;
+}
+.about-product>p{
+    font-size: 1.8vw;
+}
+.cart{
+    font-size: 1.2vw;
+}
+}
+
+</style>
+<body>
+
+   
+<main>
+    <section class="single-product">
+        
+        <div class="spart-1">
+
+            <div class="main-img"><img src="../images/plants/A1.png" alt=""></div>
+
+            <div class="small-img-box">
+                <a href="#" ><img class="small-img sm-img1" src="../images/plants/A1.png" alt=""></a>
+                <a href="#" ><img class="small-img sm-img2" src="../images/plants/a2.png" alt=""></a>
+                <a href="#" ><img class="small-img sm-img3" src="../images/plants/a3.png" alt=""></a>
+            </div>
+            
+
+        </div>
+
+        <div class="spart-2">
+
+            <h1 class="pname">Product Name</h1>
+
+            <div class="price-tag">
+                <s  class="price-tag-item ptag1">₹ 899</s>
+                <p  class="price-tag-item ptag2">₹ 399</p>
+                <p  class="price-tag-item ptag3">-55 %</p>
+            </div>
+
+            <div class="quantity-cart-box">
+
+                <div class="quantity">
+                    <button id="minus">&#x2796</button>
+                        <input type="text" id="num" value="1">
+                    <button id="plus">&#x2795</button>
+                </div>
+
+                <button class="cart">Add To My Garden</button>
+
+            </div>
+
+            <div class="about-product">
+                <h1>About Product</h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur 
+                    adipisicing elit. Quaerat non ullam odit 
+                    voluptate aliquam, vel ipsum, a doloremque eius recusandae sed!
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+</main>
+ 
+    
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+crossorigin="anonymous"> </script>
+
+
+<script>
+  
+  </script>
+  
+</body>
+</html>

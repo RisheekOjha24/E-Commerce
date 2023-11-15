@@ -69,7 +69,8 @@ padding: 10px;
     font-family: 'Righteous','Montserrat';
     letter-spacing: 1.5px;
     padding: 16px;
-    transition: 0.2s ease-in-out;
+    transition: 0.2s ease-out;
+    border-radius:100px 5px 100px;
 }
 .nav_items>li>a.act{
     color:white;
@@ -109,6 +110,19 @@ padding: 10px;
     margin-bottom: 6px;
     border-radius: 10px;
  
+}
+.ham{
+    width:40px; 
+    height:40px;
+    display: none;
+}
+.cross{
+    width:40px; 
+    height:40px;
+    display: none;
+    position: fixed;
+    right: 0;
+    z-index: 4;
 }
 
 /* Navbar styling finished */
@@ -223,21 +237,6 @@ padding: 10px;
   }
 
 /* navdown inside styling ends */
-
-/* Menu and cross styling of navbar */
-.ham{
-    width:40px; 
-    height:40px;
-    display: none;
-}
-.cross{
-    width:40px; 
-    height:40px;
-    display: none;
-    position: fixed;
-    right: 0;
-    z-index: 4;
-}
 
 /* media query for section main-1 starts */
 
@@ -410,8 +409,6 @@ padding: 10px;
 .product-item{
     min-height: 250px; /* Set a minimum height */
     width: 200px;
-
-
     border-radius: 100px 100px 20px 20px;
     background-color: #c0c7c16e;
     background-size: cover;
@@ -421,7 +418,7 @@ padding: 10px;
  .product-item:hover{
 
     transform: scale(1.05);
-    background-color: #2bb47241 ;
+    background-color:rgba(255, 228, 196, 0.753) ;
 } 
 
 .items-head{

@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Montserrat:wght@700&family=Pacifico&family=Righteous&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Gabarito:wght@700&family=Zen+Dots&family=Homemade+Apple&family=Epilogue:wght@900&family=Merienda:wght@500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+ 
+}
+html,body
+{
+    width:100%;
+    height:100%;
+   
+}
+
+.navbar{
+
+    height:16vh;
+   
+    /* background-color: rgb(82, 223, 236); */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #F0FCF3;
+
+}
+ /* logoA styling */
+.logo_1{
+
+    width:150px;
+    height:18px;
+    position: absolute;
+    left:40px;
+    top:40px;
+    
+}
+
+    /* nav-items styling */
+
+.nav_items{
+    display: flex;
+    padding-left: 2rem;
+    gap:4px;
+    margin-right:1rem;
+    margin-left: 8rem;
+    /* background-color: #b4c1c1; */
+}
+.nav_items>li{
+
+padding: 10px;
+}
+.nav_items>li>a
+{
+    color: black;
+    font-size: 18px;
+    font-family: 'Righteous','Montserrat';
+    letter-spacing: 1.5px;
+    padding: 16px;
+    transition: 0.2s ease-out;
+    border-radius:100px 5px 100px;
+}
+.nav_items>li>a.act{
+    color:white;
+}
+
+.nav_items>li>a:hover,.act
+{
+    background-color: rgba(43, 176, 31, 0.811);
+    border-radius:100px 5px 100px  ;
+    box-shadow: 6px 5px 2px  rgba(39, 148, 198, 0.55);
+    
+    background-image: url('../images/navleaf.jpg'); /* Change background image on hover */
+    background-size: cover;
+    color: white;
+    
+}
+
+/* logoB styling */
+.logoB{
+    box-sizing: border-box;
+    padding-right:1rem; 
+    
+}
+.logo_3{
+
+    width:48px;
+    height:45px;
+    margin-right: 1rem;
+}
+
+.logo_4{
+
+    width:30px;
+    height:30px;
+   
+    background-color: #F0FCF3;
+    margin-bottom: 6px;
+    border-radius: 10px;
+ 
+}
+
+.ham{
+    width:40px; 
+    height:40px;
+    display: none;
+}
+.cross{
+    width:40px; 
+    height:40px;
+    display: none;
+    position: fixed;
+    right: 0;
+    z-index: 4;
+}
+
+/* Media query for navbar */
+
+@media (max-width:1000px) {
+    .nav_items{
+        
+        flex-direction: column;
+        gap: 40px;
+        align-items:flex-start;
+        justify-content: flex-start;
+        padding:10rem 40px 0px 20px;
+        position: fixed;
+        top:0;
+        right:-30rem;
+        margin:0;
+        height: 100vh;
+        width: 300px;
+        z-index: 2;
+        background: linear-gradient(200deg, rgb(228, 223, 223) 1%, #3ffbb3 78%,rgba(145, 219, 80, 0.616) 45%);
+        border-radius: 40px 0 0 0;
+        box-shadow: 0px 20px 40px rgba(16, 159, 18, 0.858);
+        transition: 0.5s ease-in-out;
+
+    }
+
+    .ham{
+        display: inline-block;
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+    .cross{
+        display: none;
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+
+    .navdown1{
+        width: 90%;
+    }
+    .navdown2{
+
+        width: 100%;
+        
+        margin-left: 2.5rem;
+    }
+     
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+
+        .navdown2{
+            width:96%;
+            margin-left: 8rem;
+        }
+}
+@media (max-width: 420px){
+    .logo_1{
+        width:120px;
+        height:18px;
+        top:45px;
+        left: 10px;
+    }
+}
+/* navbar styling ends here completely */
+
+
+.single-product{
+        
+        display: flex;
+        background-color:#F0FCF3;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-left: 2rem;
+    }
+
+.spart-1{
+    
+    margin-left: 2rem;
+    
+}
+.main-img{
+
+    height:27rem;
+    width:28rem;
+    background-color: aliceblue;
+    margin-right: 2rem;
+
+    border: 6px double rgb(155, 80, 52);
+
+}
+.main-img>img{
+    width:100%;
+    height:100%;
+}
+
+.small-img-box{
+   
+    margin: 2rem 4rem;
+    padding: 10px;
+    height:80px;
+    background-color: white;
+    display: flex;
+    gap: 10px;
+   
+    justify-content:space-between;
+}
+.small-img-box a{
+
+    flex: 1;
+    border: 1px solid black;
+    border: 1px solid black;
+    
+}
+
+.small-img{
+
+    width:100%;
+    height:100%;
+
+}
+
+.spart-2{
+    margin-left: 1rem;
+    
+}
+.pname{
+    margin:20px 2px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+}
+.price-tag{
+    white-space: nowrap;
+    margin-right: 1rem;
+}
+.price-tag-item{
+    display: inline-block;
+    margin: 10px;
+    font-size: 25px;
+    font-family: 'Merienda';
+   color: rgb(45, 139, 16);
+}
+.ptag1{
+    text-decoration: line-through;
+}
+.ptag3{
+    padding:10px;
+    font-size: 20px;
+    font-family: 'Epilogue';
+    color: white;
+    background-color:orange;
+    border-radius: 10px;
+    
+}
+
+.quantity{
+    white-space: nowrap;
+}
+#minus{
+        border-radius: 50%;
+        width:45px;
+        height:45px;
+        
+    }
+    #minus:hover{
+        filter: invert() brightness(2);
+    }
+    #num{
+       width: 60px;
+       height: 40px;
+       margin: 1.6rem;
+       font-size: 16px;
+       text-align: center;
+       border-radius:100px 5px 100px  ;
+       background:url(../images/navleaf.jpg);
+    
+       color: white;
+       font-family:Tahoma;
+        font-weight: bold;
+       filter:  contrast(2);
+       box-shadow: 2px 2px 4px rgb(114, 129, 114);
+    }
+    #plus{
+        border-radius: 50%;
+        width:45px;
+        height:45px;
+    }
+    #plus:hover{
+        border-radius: 50%;
+       
+        filter: invert() brightness(2);
+    }
+
+.cart{
+    margin: 2rem 1rem;
+    padding: 8px 40px;
+    border-radius: 20px;
+    text-align: center;
+    font-family:'Merienda';
+    word-spacing: 4px;
+    font-weight: bolder;
+    white-space: nowrap;
+}
+.cart:hover{
+    background-color: rgb(31, 192, 184);
+    color: rgb(255, 255, 255);
+}
+
+.about-product{
+    padding: 1rem;
+   
+}
+
+.about-product h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+    text-decoration:underline;
+    font-weight: bolder;
+}
+.about-product p{
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: 'Gabarito';
+}
+
+/* media queries */
+@media (max-width: 870px){
+
+    .single-product {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .spart-2{
+        text-align: center;
+    }
+}
+@media (max-width: 570px){
+
+    .main-img{
+        width:90%;
+        height: 80%;
+    }
+    .spart-1{
+        margin: 0;
+    }
+    .spart-2{
+        margin: 0;
+    }
+    .small-img-box{
+        display: none;
+    }
+
+}
+@media (min-width: 1280px){
+
+.pname{
+    font-size: 1.6vw;
+}
+.ptag1,.ptag2,.ptag3,.about-product>h1{
+    font-size: 1.8vw;
+}
+.about-product>p{
+    font-size: 1.4vw;
+}
+.cart{
+    font-size: 1.2vw;
+}
+}
