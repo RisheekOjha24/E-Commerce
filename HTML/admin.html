@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
+
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
+
+</head>
+ <body>
+  
+        <!-- navbar starts here -->
+
+          <nav class="navbar">
+          
+                  <div class="logoA">
+  
+                      <a href="../HTML/index.html">
+                          <img src="../images/logo.png" alt="Petals Hub" class="logo_1">
+                      </a>
+  
+                  </div>
+  
+                  <ul class="nav_items">
+  
+                      <li><a href="../HTML/index.html" >Home</a></li>
+                      <li><a href="../HTML/products.html" class="act">Product</a></li>
+                      <li><a href="#">GoodRead</a></li>
+                      <li><a href="#">Contact</a></li>
+                      <li><a href="#">About</a></li>
+  
+                  </ul>
+  
+                  <div class="logoB">
+                      <a href="../HTML/cart.html"><img class="logo_3" src="../images/shopbag.png" alt=""></a>
+                      <a href=""><img class="logo_4" src="../images/admin4.png" alt=""></a>
+                      <img class="ham" src="../images/ham.png" alt="Menu">
+                      <img class="cross" src="../images/cross2.png" alt="Close">
+                  </div>
+              
+          </nav>
+
+      <!-- navbar section ends here -->
+
+    <section>
+      <div class="container">
+        
+        <div class="user signinBx">
+          <div class="imgBx"><img src="../images/pots/pA1.png" alt="" /></div>
+          <div class="formBx">
+            <form action="" onsubmit="return false;" id="sign-in-form">
+              <h1></h1>
+              <h2>Sign In</h2>
+              <input type="email" name="email-login" placeholder="Email Address"  id="email-login"/>
+              <input type="password" name="password-login" placeholder="Password" id="password-login"/>
+              <input type="submit" name="" value="Login" id="login-btn"/>
+              <p class="signup">
+                Don't have an account ?
+                <a href="#" onclick="toggleForm(event);">Sign Up.</a>
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="user signupBx">
+          <div class="formBx">
+            <form action="" onsubmit="return validateForm(this);" id="sign-up-form" >
+                <h1></h1>
+                <h2>Create an account</h2>
+                <input type="text" name="username" id="username" placeholder="Username" required />
+                <input type="email" name="email" id="email-signUp" placeholder="Email Address" required />
+                <input type="password" name="password" id="password-signUp" placeholder="Create Password" required />
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required />
+                <input type="submit" name="submitBtn" value="Sign Up" id="sign-up-btn" />
+
+                <p class="signup">
+                Already have an account ?
+                <a href="#" onclick="toggleForm(event);">Sign in</a>
+              </p>
+
+            </form>
+          </div>
+          <div class="imgBx"><img src="../images/plants/a3.png" alt="" /></div>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../JS/admin.js"></script>
+</body>
+</html>

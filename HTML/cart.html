@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Cart</title>
+    
+    <link rel="stylesheet" href="../CSS/cart.css">
+</head>
+
+<body>
+    
+    <!-- navbar starts here -->
+    <section class="main-1">
+        <nav class="navbar">
+        
+                <div class="logoA">
+
+                    <a href="../HTML/index.html">
+                        <img src="../images/logo.png" alt="Petals Hub" class="logo_1">
+                    </a>
+
+                </div>
+
+                <ul class="nav_items">
+
+                    <li><a href="../HTML/index.html" >Home</a></li>
+                    <li><a href="../HTML/products.html">Product</a></li>
+                    <li><a href="#">GoodRead</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+                <div class="logoB">
+                    <a href="#"><img class="logo_3" src="../images/shopbag.png" alt=""></a>
+                    <a href="../HTML/admin.html"><img class="logo_4" src="../images/admin4.png" alt=""></a>
+                    <img class="ham" src="../images/ham.png" alt="Menu">
+                    <img class="cross" src="../images/cross2.png" alt="Close">
+                </div>
+            
+        </nav>
+    </section>
+
+    <!-- navbar ends here common for all -->
+
+    <section class="boss">
+        <div class="container">
+            <div class="select-all">
+                <label for="select-all">Select All</label>
+                <input type="checkbox" id="select-all" onchange="selectAll(this)">
+            </div>
+
+            <div class="product">
+                <input type="checkbox" class="product-checkbox" onchange="updateTotal()">
+                <img src="../images/pots/pa3.png" alt="Product 1">
+                <div class="product-info">
+                    <div class="product-name">Product 1</div>
+                    <div class="product-quantity">
+                        <button class="quantity-btn" onclick="changeQuantity('product1', -1)">&#x2796</button>
+                        <span id="product1-quantity">2</span>
+                        <button class="quantity-btn" onclick="changeQuantity('product1', 1)">&#x2795</button>
+                        <div class="product-price" id="product1-price"></div>
+                        <button class="remove-btn" onclick="removeItem(this)"><img src="../images/delete.png" alt="Remove"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <input type="checkbox" class="product-checkbox" onchange="updateTotal()">
+                <img src="../images/plants/a2.png" alt="Product 2">
+                <div class="product-info">
+                    <div class="product-name">Product 2</div>
+                    <div class="product-quantity">
+                        <button class="quantity-btn" onclick="changeQuantity('product2', -1)">&#x2796</button>
+                        <span id="product2-quantity">1</span>
+                        <button class="quantity-btn" onclick="changeQuantity('product2', 1)">&#x2795</button>
+                        <div class="product-price" id="product2-price"></div>
+                        <button class="remove-btn" onclick="removeItem(this)"><img src="../images/delete.png" alt="Remove" srcset=""></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="total" id="cart-total">Total: ₹0</div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../JS/cart.js"></script>
+</body>
+
+</html>

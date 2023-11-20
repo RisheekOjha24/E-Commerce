@@ -1,14 +1,16 @@
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Montserrat:wght@700&family=Pacifico&family=Righteous&family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Gabarito:wght@700&family=Zen+Dots&family=Homemade+Apple&family=Epilogue:wght@900&family=Merienda:wght@500&display=swap');
 
-*{
-    margin:0;
-    padding:0;
-    list-style: none;
-    text-decoration: none;
- 
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none
 }
+
 html,body
 {
     width:100%;
@@ -25,7 +27,6 @@ html,body
     justify-content:space-between;
     align-items: center;
     background-color: #F0FCF3;
-
 }
  /* logoA styling */
 .logo_1{
@@ -119,7 +120,7 @@ padding: 10px;
     display: none;
     position: fixed;
     right: 0;
-    z-index: 4;
+    9 4;
 }
 
 /* Media query for navbar */
@@ -138,7 +139,6 @@ padding: 10px;
         margin:0;
         height: 100vh;
         width: 300px;
-        z-index: 2;
         background: linear-gradient(200deg, rgb(228, 223, 223) 1%, #3ffbb3 78%,rgba(145, 219, 80, 0.616) 45%);
         border-radius: 40px 0 0 0;
         box-shadow: 0px 20px 40px rgba(16, 159, 18, 0.858);
@@ -185,151 +185,185 @@ padding: 10px;
 }
 /* navbar styling ends here completely */
 
-.featured{
-    padding-top: 2.5rem;
-    background-color: #F0FCF3;
-    text-align: center;
-    text-transform: capitalize;
-    font-family: 'Pacifico';
-    word-spacing: 18px;
-    letter-spacing: 2px;
-    color:#219C90;
-    
-}
-.featured::first-letter{
-    font-family: 'Merienda';
-    font-size: 48px;
-
-    color: #1D5B79;
-
-}
-
-/* grid container for products */
 
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 360px); /* Create a 4-column grid */
-    grid-template-rows: repeat(auto-fit,210px);
-    gap: 20px; /* Add some spacing between the elements */
-    padding-top: 4rem;
-    justify-content: center;
-    align-items: center;
-    background-color: #F0FCF3;
-    height: auto;
-
-    }
-
-    .hbox{
-  
-        background-color: #F0FCF3;
-        border-radius: 20px 50px 10px 50px;
-        border: 2px solid rgb(60, 197, 60);
-        display: flex;
-       margin: 1.5rem;     
-
-    
-    }
-    .vbox{
-       
-        background-color:#F0FCF3;
-      
-        flex:1;
-        border-radius: 28px;
-        transform:translateY(-40px) translateX(10px);
-      
-    }
-    .vbox img{
-        width:100%;
-        height:100%;
-        background-size: cover;
-    background-position: center;
-    }
-
-    .inside{
-
-        font-size: 14px;
-        margin-left: 2rem;
-        flex: 1.4;
-      
-    }
-.star{
-    width:100px;
-    height:20px;
-    display:block;
-    margin-bottom: 1rem;
-}
-.price{
-
-   font-size: 18px;
-   font-family:Gabarito;
+/* Styling for form starts here -------------------------------- */
+#sign-up-form h1{
+    transition: 0.5s;
+    font-family:'Montserrat', sans-serif;
     font-weight: bolder;
-    display: inline;
-    margin-right: 8px;
-
+    word-spacing: 2px;
 }
-.visit{
-    display: inline-block;
-    padding: 8px 18px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-radius: 20px;
-    font-size: 15px;
-    font-weight: bold;
-    background-color: orange;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 2px 2px 4px gray;
-    border-radius: 10px 12px 44px 4px;
-    
+#sign-up-form,#sign-in-form{
+  margin-bottom: 4rem;
 }
-.visit:hover{
-    background-color:rgb(206, 138, 12) ;
-
+#sign-in-form h1{
+  transition: 0.5s;
+  font-family:'Montserrat', sans-serif;
+  font-weight: bolder;
+  word-spacing: 2px;
 }
-.inside h1{
-    font-size: 24px;
-    margin:1rem 0 1rem 0;
-    font-family: 'Gabarito';
+section {
+  position: relative;
+  min-height: 100vh;
+  background-color: #f8dd30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-/* grid container for products ends here */
-.pagination{
-    background-color:#F0FCF3;
-}
-.pagination>ul{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:20px;
-   padding: 1rem;
-  
-}
-.pagination>ul>li:first-child a{
-background-color: #29e561;
-}
-.pagination>ul>li>a{
-
-    padding: 12px 20px;
-        display:inline-block;
-        background-color:#219C90;
-        border-radius:10px ;
-        font-size: 20px;
-        font-family: 'Epilogue';
-        color: white;
-}
-.pagination>ul>li:last-child a{
-    padding: 0;
-}
-.arrow{
-    width:35px;
-    height:20px;
-    padding: 10px;
-    filter: invert();
+section .container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 20px;
 }
 
-.footer{
+section .container .user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
 
-    height: 40vh;
-    background: #000;
+section .container .user .imgBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #ff0;
+  transition: 0.5s;
+}
+
+section .container .user .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section .container .user .formBx {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+section .container .user .formBx form h2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+section .container .user .formBx form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+section .container .user .formBx form input[type='submit'] {
+  max-width: 100px;
+  background: #677eff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+section .container .user .formBx form .signup {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+section .container .user .formBx form .signup a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #677eff;
+}
+
+section .container .signupBx {
+  pointer-events: none;
+}
+
+section .container.active .signupBx {
+  pointer-events: initial;
+}
+
+section .container .signupBx .formBx {
+  left: 100%;
+}
+
+section .container.active .signupBx .formBx {
+  left: 0;
+}
+
+section .container .signupBx .imgBx {
+  left: -100%;
+}
+
+section .container.active .signupBx .imgBx {
+  left: 0%;
+}
+
+section .container .signinBx .formBx {
+  left: 0%;
+}
+
+section .container.active .signinBx .formBx {
+  left: 100%;
+}
+
+section .container .signinBx .imgBx {
+  left: 0%;
+}
+
+section .container.active .signinBx .imgBx {
+  left: -100%;
+}
+
+@media (max-width: 991px) {
+  section .container {
+    max-width: 400px;
+  }
+
+  section .container .imgBx {
+    display: none;
+  }
+
+  section .container .user .formBx {
+    width: 100%;
+  }
 }
