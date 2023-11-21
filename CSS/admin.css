@@ -120,7 +120,6 @@ padding: 10px;
     display: none;
     position: fixed;
     right: 0;
-    9 4;
 }
 
 /* Media query for navbar */
@@ -188,7 +187,7 @@ padding: 10px;
 
 
 /* Styling for form starts here -------------------------------- */
-#sign-up-form h1{
+#sign-up-form h1,#sign-in-form h1{
     transition: 0.5s;
     font-family:'Montserrat', sans-serif;
     font-weight: bolder;
@@ -197,12 +196,22 @@ padding: 10px;
 #sign-up-form,#sign-in-form{
   margin-bottom: 4rem;
 }
-#sign-in-form h1{
-  transition: 0.5s;
-  font-family:'Montserrat', sans-serif;
-  font-weight: bolder;
-  word-spacing: 2px;
+
+#logout-btn{
+  padding:10px 20px;
+  border-radius: 45px;
+  font-weight: bold;
+  margin-top: 4rem;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg,#0F2027 50%,#203A43 10%,#2C5364 10%);
+  color: white;
+  font-size: 14px;
 }
+#logout-btn:hover{
+  transform: scale(1.05);
+
+}
+
 section {
   position: relative;
   min-height: 100vh;

@@ -121,18 +121,20 @@ $("#sign-up-form").css({
     "height": originalHeight,
     "border-radius": "40px",
     "text-align": "center",
-    "background": "linear-gradient(45deg, #FF6B6B, #3B82F6, #9333EA, #FCD34D)"
+    "background": "linear-gradient(45deg, #8360c3, #2ebf91)"
 }).animate({
      
     width: "100%", // Revert to the original width
      height:"4rem",// Revert to the original height
     
 }, 1000); // Adjust the duration of the animation as needed (in milliseconds)
-
+$(".formBx").css({
+    "background": "linear-gradient(45deg, #acb6e5, #86fde8)",
+})
 
 $("#sign-up-form .signup").text("Your acconut is created ? ");
 $("#sign-up-form .signup").append("<a href='#' onclick='toggleForm();'>Sign in</a>");
-
+$("#sign-up-form .signup").css("font-weight","bolder");
 
 setTimeout(function() {
 
@@ -141,7 +143,7 @@ setTimeout(function() {
     $("#sign-up-form h1").css({
             "color": "white",
             "font-size": "18px",
-            "padding":"10px 2px 20px 2px",
+            "padding":"10px 12px 20px 12px",
             
         }) 
 
@@ -152,15 +154,21 @@ return false;
 }
 //Validate form and Sign Up Animation code ended successfully----------------------------------------------------------------
 
-
-// Firebase Login code below --------------------------------
-
-// Reference the email and password input fields
 var emailInput = $("#email-login");
 var passwordInput = $("#password-login");
 var submitButton = $("#login-btn");
 
-submitButton.click(function () {
+// Check login state on page load
+$(document).ready(function () {
+    if (sessionStorage.getItem('isLoggedIn') === 'true') {
+        // User is logged in, show the logged-in state
+        var storedUserName = sessionStorage.getItem('userName');
+        showLoggedInState(storedUserName);
+    }
+});
+
+// Add click event handler for the Login button
+submitButton.on('click', function () {
     var email_login = emailInput.val();
     var password_login = passwordInput.val();
     firebase.auth().signInWithEmailAndPassword(email_login, password_login)
@@ -168,7 +176,18 @@ submitButton.click(function () {
             // Sign in successful
             var user = userCredential.user;
             console.log("Congratulations, " + ", you are logged in as " + user.email);
-            successful(user);
+
+            // Fetch and store the username
+            fetchUserName(user.uid)
+                .then(function (userName) {
+                    sessionStorage.setItem('userName', userName);
+                    showLoggedInState(userName);
+                    // Set a flag in sessionStorage indicating the user is logged in
+                    sessionStorage.setItem('isLoggedIn', 'true');
+                })
+                .catch(function (error) {
+                    console.error("Error fetching user name:", error);
+                });
         })
         .catch(function (error) {
             // Handle errors
@@ -179,11 +198,8 @@ submitButton.click(function () {
         });
 });
 
-//Login code ended successfully----------------------------------------------------------------
-
-
-//Login Animation code begins----------------------------------------------------------------
-function successful(user) {
+// Add a function to show the logged-in state
+function showLoggedInState(userName) {
     // login form original height and width stored       
     var oWidth = $("#sign-in-form").width();
     var oHeight = $("#sign-in-form").height();
@@ -197,27 +213,49 @@ function successful(user) {
         "height": oHeight,
         "border-radius": "40px",
         "text-align": "center",
-        "background": "linear-gradient(45deg, #FF6B6B, #3B82F6, #9333EA, #FCD34D)"
+        "background": "linear-gradient(45deg, #8360c3, #2ebf91)"
     }).animate({
         width: "100%", // Revert to the original width
         height: "4rem", // Revert to the original height
     }, 1000); // Adjust the duration of the animation as needed (in milliseconds)
 
-    fetchUserName(user.uid)
-        .then(function (userName) {
-            setTimeout(function () {
-                $('#sign-in-form h1').text("Congratulations! You are logged in as " + userName);
+    $(".formBx").css({
+        "background": "linear-gradient(45deg, #acb6e5, #86fde8)",
+    })
 
-                $("#sign-in-form h1").css({
-                    "color": "white",
-                    "font-size": "18px",
-                    "padding": "10px 2px 20px 2px"
-                });
-            }, 100);
-        })
-        .catch(function (error) {
-            console.error("Error fetching user name:", error);
+    setTimeout(function () {
+        function capitalizeFirstLetter(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        // Capitalize the first letter of userName
+        var capitalizedUserName = capitalizeFirstLetter(userName);
+
+        $('#sign-in-form h1').text("Congratulations! You are Logged in as " + capitalizedUserName);
+
+        $("#sign-in-form h1").css({
+            "color": "white",
+            "font-size": "18px",
+            "padding": "10px 12px 26px 12px",
         });
+
+        var logoutButton = $("<button id='logout-btn'>Log Out</button>");
+       
+        
+    // setTimeout(function () {
+        $("#logout-container").append(logoutButton);
+    // },600);
+
+        $("#logout-btn").on('click', function () {
+            // Perform a simple logout operation
+            // For example, redirect the user to a logout page or perform any other desired action
+            sessionStorage.removeItem('isLoggedIn'); // Remove the flag on logout
+            sessionStorage.removeItem('userName'); // Remove the stored username
+            window.location.href = "../HTML/admin.html";
+            alert("You are successfully Logged Out");
+        });
+
+    }, 600);
 }
 
 const fetchUserName = (uid) => {
@@ -238,5 +276,8 @@ const fetchUserName = (uid) => {
             });
     });
 };
-
 //Login animation code finished successfully ----------------------------------------------------------------
+
+// baba ji ka thulu
+//Login animation code finished successfully ----------------------------------------------------------------
+
