@@ -36,7 +36,6 @@ html,body
     position: absolute;
     left:40px;
     top:40px;
-    
 }
 
     /* nav-items styling */
@@ -87,25 +86,27 @@ padding: 10px;
 }
 .logo_3{
 
-    width:48px;
-    height:45px;
-    margin-right: 1rem;
-    border-radius: 50%;
+    
+  width:44px;
+  height:40px;
+  margin-right: 1rem;
+  padding: 5px;
+  border-radius: 50%;
 }
 .logo_3:hover{
 
-    background:linear-gradient(to bottom,yellow,orange);
+  background: radial-gradient(circle at 10% 20%, rgb(0, 255, 176) 0%, rgb(66, 105, 242) 90%); 
+    
 }
 
 .logo_4{
 
-    width:30px;
-    height:30px;
+  width:35px;
+  height:35px;
    
-    background-color: #F0FCF3;
-    margin-bottom: 6px;
-    border-radius: 10px;
- 
+  padding: 5px;
+  background: radial-gradient(circle at 10% 20%, rgb(0, 255, 176) 0%, rgb(66, 105, 242) 90%);
+  border-radius: 50%; 
 }
 
 
@@ -120,6 +121,7 @@ padding: 10px;
     display: none;
     position: fixed;
     right: 0;
+    z-index: 2;
 }
 
 /* Media query for navbar */
@@ -133,6 +135,7 @@ padding: 10px;
         justify-content: flex-start;
         padding:10rem 40px 0px 20px;
         position: fixed;
+        z-index: 1;
         top:0;
         right:-30rem;
         margin:0;
@@ -214,19 +217,19 @@ padding: 10px;
 
 section {
   position: relative;
-  min-height: 100vh;
-  background-color: #f8dd30;
+  background-color:#F0FCF3;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 4rem 1rem ;
+  /* padding-top: */
 }
 
 section .container {
   position: relative;
   width: 800px;
   height: 500px;
-  background: #fff;
+  background:rgb(209, 236, 222);
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   border-radius: 20px;
@@ -245,7 +248,7 @@ section .container .user .imgBx {
   position: relative;
   width: 50%;
   height: 100%;
-  background: #ff0;
+  background:rgb(209, 236, 222);
   transition: 0.5s;
 }
 
@@ -262,7 +265,7 @@ section .container .user .formBx {
   position: relative;
   width: 50%;
   height: 100%;
-  background: #fff;
+  background:rgb(209, 236, 222);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -364,6 +367,7 @@ section .container.active .signinBx .imgBx {
 }
 
 @media (max-width: 991px) {
+  
   section .container {
     max-width: 400px;
   }
@@ -375,4 +379,32 @@ section .container.active .signinBx .imgBx {
   section .container .user .formBx {
     width: 100%;
   }
+}
+
+
+#custom-notification {
+  position: fixed;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background:linear-gradient(to bottom,#06be68bd 40%,#2b5a60c5 60%);
+  color:white;
+  font-weight: bold;
+  padding: 10px 25px;
+  
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  font-size: 18px;
+  letter-spacing:1px;
+  font-family:'Montserrat', 'Helvetica Neue';
+  transition: opacity 0.5s ease-in-out;
+  z-index:99;;
+}
+#custom-notification.show {
+  opacity: 1;
+}
+
+#custom-notification.hidden {
+  display: none;
 }

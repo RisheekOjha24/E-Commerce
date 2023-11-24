@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products page</title>
-    <link rel="stylesheet" href="../CSS/products.css">
+    <title>Document</title>
 </head>
+<link rel="stylesheet" href="../CSS/om.css">
 <body>
-    <!-- navbar starts here -->
-    <section class="main-1">
+     <!-- navbar starts here -->
+     <section class="main-1">
         <nav class="navbar">
         
                 <div class="logoA">
@@ -24,14 +24,14 @@
                     <li><a href="../HTML/index.html" >Home</a></li>
                     <li><a href="../HTML/products.html" class="act">Product</a></li>
                     <li><a href="#">GoodRead</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="../HTML/contact.html">Contact</a></li>
                     <li><a href="#">About</a></li>
 
                 </ul>
 
                 <div class="logoB">
                     <a href="../HTML/cart.html"><img class="logo_3" src="../images/shopbag.png" alt=""></a>
-                    <a href=""><img class="logo_4" src="../images/admin4.png" alt=""></a>
+                    <a href="../HTML/admin.html"><img class="logo_4" src="../images/admin4.png" alt=""></a>
                     <img class="ham" src="../images/ham.png" alt="Menu">
                     <img class="cross" src="../images/cross2.png" alt="Close">
                 </div>
@@ -40,60 +40,46 @@
     </section>
 
 <!-- navbar ends here common for all -->
+<h1 class="featured"><span>A</span>ll featured Products</h1>
+<section class="main-2">
+    <div class="our-product">
 
-<h1 class="featured">All featured Products</h1>
-
-<!-- products section starts -->
-
-<section class="products-section">
-
-    <div class="grid-container">
-    
-        <div class="hbox">
-            <div class="vbox"><img src="../images/cactus.png" alt="">
+            <div class="item-set">
+                <div class="product-item pditem-1">
+                    <a href="../HTML/flower.html"><button type="button" class="item-btn">Explore</button></a>
+                    <h1 class="items-head">Flowers</h1>
+                </div>
+                <div class="product-item pditem-2">
+                   <a href="../HTML/pots.html"><button type="button" class="item-btn">Explore</button></a> 
+                    <h1 class="items-head">Pots</h1>
+                </div>
+                <div class="product-item pditem-3">
+                    <button type="button" class="item-btn">Explore</button>
+                    <h1 class="items-head">Seeds</h1>
+                </div>
+                <div class="product-item pditem-4">
+                    <button type="button" class="item-btn">Explore</button>
+                    <h1 class="items-head">Garden Tools</h1>
+                </div>
+                <div class="product-item pditem-5">
+                    <button type="button" class="item-btn">Explore</button>
+                    <h1 class="items-head">Plants</h1>
+                </div>
+                <div class="product-item pditem-6">
+                    <button type="button" class="item-btn">Explore</button>
+                    <h1 class="items-head">Home Decor</h1>
+                </div>
             </div>
-            <div class="inside">
-                <h1>Cactus Lily</h1>
-                <img class="star" src="../images/5-star.png" alt="">
-                <p class="price"> ₹ 350 </p>
-                <a href="../HTML/s1product.html?pid=p1&type=flowers" class="visit">Visit</a>
-            </div>
-      </div>
-    
-      <div class="hbox">
-        <div class="vbox"><img src="../images/cactus.png" alt="">
         </div>
-        <div class="inside">
-            <h1>Rose Lily</h1>
-            <img class="star" src="../images/5-star.png" alt="">
-            <p class="price"> ₹ 350 </p>
-            <a href="../HTML/s1product.html?pid=p2&type=flowers" class="visit">Visit</a>
-        </div>
-        </div>
-    
-    </div> 
-         <!-- grid container ends here -->
+    </div>
+</section>
 
-        </section> 
-<!-- product section ends here -->
 
-        <div class="pagination">
-            <ul>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#"><img class="arrow" src="../images/arrow.png" alt=""></a></li>
-            </ul>
-        </div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+crossorigin="anonymous"> </script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>`
 
-    <section class="footer"></section>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-    crossorigin="anonymous"> </script>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>`
-
-    <script type="module" src="../JS/products.js"></script>
-
+<script type="module" src="../JS/products.js"></script>
 
 </body>
 </html>

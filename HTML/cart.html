@@ -7,6 +7,10 @@
     <title>My Shopping Cart</title>
     
     <link rel="stylesheet" href="../CSS/cart.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
 </head>
 
 <body>
@@ -28,7 +32,7 @@
                     <li><a href="../HTML/index.html" >Home</a></li>
                     <li><a href="../HTML/products.html">Product</a></li>
                     <li><a href="#">GoodRead</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="../HTML/contact.html">Contact</a></li>
                     <li><a href="#">About</a></li>
 
                 </ul>
@@ -85,13 +89,19 @@
                 </div>
             </div>
 
-            <div class="total" id="cart-total">Total: ₹0</div>
+            <div class="total" id="cart-total">Total: ₹ 0</div>
             <button class="checkout-btn">Proceed to Checkout</button>
         </div>
+
     </section>
 
+    <div id="custom-notification" class="hidden">
+        Your items are saved!
+    </div>
+
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="../JS/cart.js"></script>
+    <script src="../JS/cart.js" ></script>
 </body>
 
 </html>

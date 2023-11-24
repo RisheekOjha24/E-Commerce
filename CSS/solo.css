@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pacifico&family=Righteous&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Edu+TAS+Beginner&family=Playpen+Sans&family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Gabarito:wght@700&family=Zen+Dots&family=Homemade+Apple&family=Epilogue:wght@900&family=Merienda:wght@500&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+   
+}
+html,body
+{
+    width:100%;
+    height:100%;
+
+}
+
+.navbar{
+
+    height:16vh;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #F0FCF3;
+
+}
+ /* logoA styling */
+.logo_1{
+
+    width:150px;
+    height:18px;
+    position: absolute;
+    left:40px;
+    top:40px;
+    
+}
+
+    /* nav-items styling */
+
+.nav_items{
+    display: flex;
+    padding-left: 2rem;
+    gap:4px;
+    margin-right:1rem;
+    margin-left: 8rem;
+    /* background-color: #b4c1c1; */
+}
+.nav_items>li{
+
+padding: 10px;
+}
+.nav_items>li>a
+{
+    color: black;
+    font-size: 18px;
+    font-family: 'Righteous','Montserrat';
+    letter-spacing: 1.5px;
+    padding: 16px;
+    transition: 0.2s ease-out;
+    border-radius:100px 5px 100px;
+}
+.nav_items>li>a.act{
+    color:white;
+}
+
+.nav_items>li>a:hover,.act
+{
+    background-color: rgba(43, 176, 31, 0.811);
+    border-radius:100px 5px 100px  ;
+    box-shadow: 6px 5px 2px  rgba(39, 148, 198, 0.55);
+    
+    background-image: url('../images/navleaf.jpg'); /* Change background image on hover */
+    background-size: cover;
+    color: white;
+    
+}
+
+/* logoB styling */
+.logoB{
+    box-sizing: border-box;
+    padding-right:1rem; 
+    
+}
+.logo_3{
+
+    width:44px;
+    height:40px;
+    margin-right: 1rem;
+    padding: 5px;
+    border-radius: 50%;
+}
+.logo_3:hover{
+    background: radial-gradient(circle at 10% 20%, rgb(0, 255, 176) 0%, rgb(66, 105, 242) 90%);
+}
+
+.logo_4{
+
+    width:35px;
+    height:35px;
+     padding: 5px;
+    border-radius: 50%; 
+ 
+}
+.logo_4:hover{
+
+    background: radial-gradient(circle at 10% 20%, rgb(0, 255, 176) 0%, rgb(66, 105, 242) 90%); 
+      
+  }
+.ham{
+    width:40px; 
+    height:40px;
+    display: none;
+}
+.cross{
+    width:40px; 
+    height:40px;
+    display: none;
+    position: fixed;
+    right: 0;
+    z-index: 4;
+}
+
+/* media query for section main-1 starts */
+
+@media (max-width:1000px) {
+    .nav_items{
+        
+        flex-direction: column;
+        gap: 40px;
+        align-items:flex-start;
+        justify-content: flex-start;
+        padding:10rem 40px 0px 20px;
+        position: fixed;
+        top:0;
+        right:-30rem;
+        margin:0;
+        height: 100vh;
+        width: 300px;
+        z-index: 2;
+        background: linear-gradient(200deg, rgb(228, 223, 223) 1%, #3ffbb3 78%,rgba(145, 219, 80, 0.616) 45%);
+        border-radius: 40px 0 0 0;
+        box-shadow: 0px 20px 40px rgba(16, 159, 18, 0.858);
+        transition: 0.5s ease-in-out;
+
+    }
+
+    .ham{
+        display: inline-block;
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+    .cross{
+        display: none;
+        margin-left: 2rem;
+        margin-right: 1rem;
+    }
+
+    .navdown1{
+        width: 90%;
+    }
+    .navdown2{
+
+        width: 100%;
+        
+        margin-left: 2.5rem;
+    }
+     
+}
+@media (min-width: 500px) and (max-width: 1000px) {
+
+        .navdown2{
+            width:96%;
+            margin-left: 8rem;
+        }
+}
+@media (max-width: 420px){
+    .logo_1{
+        width:120px;
+        height:18px;
+        top:45px;
+        left: 10px;
+    }
+}
+
+/* Navbar styling finished */
+
+/* //Grid container items styling */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 380px); /* Create a 4-column grid */
+    grid-template-rows: repeat(auto-fit,210px);
+    gap: 20px; /* Add some spacing between the elements */
+    padding-top: 4rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0FCF3;
+    height: auto;
+
+    }
+
+    .hbox{
+  
+        background-color: #F0FCF3;
+        border-radius: 20px 50px 10px 50px;
+        border: 2px solid rgb(60, 197, 60);
+        display: flex;
+       margin: 1.5rem;     
+
+    
+    }
+    .vbox{
+       
+        background-color:#F0FCF3;
+        flex:1.5;
+        border-radius: 28px;
+        transform:translateY(-40px) translateX(10px);
+      
+    }
+    .vbox img{
+        width:100%;
+        height:100%;
+        background-size: cover;
+    background-position: center;
+    }
+
+    .inside{
+
+        font-size: 14px;
+        margin-left: 2rem;
+        flex: 1.4;
+        position: relative;
+      
+    }
+.star{
+    width:100px;
+    height:20px;
+    display:block;
+    margin-bottom: 1rem;
+    position: absolute;
+    bottom:40px; 
+    right: 50px; 
+}
+.price{
+
+   font-size: 18px;
+   font-family:Gabarito;
+    font-weight: bolder;
+    display: inline;
+    margin-right: 8px;
+    position: absolute;
+    bottom: 12px;
+    left:-10px;
+}
+.visit{
+    display: inline-block;
+    padding: 8px 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 4px gray;
+    border-radius: 10px 12px 44px 4px;
+    position: absolute;
+    bottom: 6px;
+    right: 14px;
+    
+}
+.visit:hover{
+    background-color:rgb(206, 138, 12) ;
+
+}
+.inside h1{
+    font-size: 20px;
+    margin:1rem 0 1rem 0;
+    font-family: 'Gabarito';
+}
+
+/* grid container for products ends here */
+.pagination{
+    background-color:#F0FCF3;
+    padding-top: 4rem;
+}
+.pagination>ul{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+   padding: 1rem;
+  
+}
+.pagination>ul>li:first-child a{
+background-color: #29e561;
+}
+.pagination>ul>li>a{
+
+    padding: 10px 15px;
+        display:inline-block;
+        background-color:#219C90;
+        border-radius:10px ;
+        font-size: 18px;
+        font-family: 'Epilogue';
+        color: white;
+}
+.pagination>ul>li:last-child a{
+    padding: 0;
+}
+.arrow{
+    width:25px;
+    height:15px;
+    padding: 10px;
+    filter: invert();
+}
+
+.footer{
+
+    height: 40vh;
+    background: #000;
+}

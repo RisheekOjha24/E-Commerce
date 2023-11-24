@@ -97,14 +97,16 @@ function validateForm(form) {
   // Validate password
     var passwordPattern = /^\S{6,}$/;
     if (!passwordPattern.test(password)) {
-        alert('Password must be at least 6 characters long and should not contain spaces.');
+       
+        showNotification('Password must be at least 6 characters long and should not contain spaces');
         return false; // Prevent form submission
     }
 
 
     // Check if password matches confirm password
     if (password !== confirmPassword) {
-        alert('Password and Confirm Password do not match. Please try again.');
+
+        showNotification('Password and Confirm Password do not match');
         return false; // Prevent form submission
     }
 
@@ -154,6 +156,9 @@ return false;
 }
 //Validate form and Sign Up Animation code ended successfully----------------------------------------------------------------
 
+
+//Login code stareted
+
 var emailInput = $("#email-login");
 var passwordInput = $("#password-login");
 var submitButton = $("#login-btn");
@@ -176,7 +181,8 @@ submitButton.on('click', function () {
             // Sign in successful
             var user = userCredential.user;
             console.log("Congratulations, " + ", you are logged in as " + user.email);
-
+           
+            // localStorage.clear();
             // Fetch and store the username
             fetchUserName(user.uid)
                 .then(function (userName) {
@@ -184,6 +190,7 @@ submitButton.on('click', function () {
                     showLoggedInState(userName);
                     // Set a flag in sessionStorage indicating the user is logged in
                     sessionStorage.setItem('isLoggedIn', 'true');
+                    sessionStorage.setItem('uid', user.uid); // Store the user ID
                 })
                 .catch(function (error) {
                     console.error("Error fetching user name:", error);
@@ -193,7 +200,7 @@ submitButton.on('click', function () {
             // Handle errors
             var errorCode = error.code;
             var errorMessage = error.message;
-            alert("Invalid Email or Password. Please try again");
+            showNotification("Invalid Email or Password. Please try again")
             // You can display an error message to the user.
         });
 });
@@ -241,22 +248,28 @@ function showLoggedInState(userName) {
 
         var logoutButton = $("<button id='logout-btn'>Log Out</button>");
        
-        
-    // setTimeout(function () {
         $("#logout-container").append(logoutButton);
-    // },600);
-
         $("#logout-btn").on('click', function () {
             // Perform a simple logout operation
             // For example, redirect the user to a logout page or perform any other desired action
-            sessionStorage.removeItem('isLoggedIn'); // Remove the flag on logout
-            sessionStorage.removeItem('userName'); // Remove the stored username
-            window.location.href = "../HTML/admin.html";
-            alert("You are successfully Logged Out");
+            // sessionStorage.removeItem('isLoggedIn'); // Remove the flag on logout
+            // sessionStorage.removeItem('userName'); // Remove the stored username
+            // sessionStorage.removeItem('uid');
+            // sessionStorage.removeItem('cartDataFetched');
+            sessionStorage.clear();
+            localStorage.clear();
+            setTimeout(function() {
+                window.location.href = "../HTML/admin.html";
+            },800);
+         
+            showNotification("You are successfully logged out");
         });
 
     }, 600);
 }
+
+        //stor uid of specific user
+
 
 const fetchUserName = (uid) => {
     return new Promise((resolve, reject) => {
@@ -265,6 +278,7 @@ const fetchUserName = (uid) => {
                 if (doc.exists) {
                     // Document exists, resolve with the user name
                     var userName = doc.data().name;
+                    
                     resolve(userName);
                 } else {
                     // Document does not exist, reject with an appropriate message
@@ -278,6 +292,19 @@ const fetchUserName = (uid) => {
 };
 //Login animation code finished successfully ----------------------------------------------------------------
 
-// baba ji ka thulu
 //Login animation code finished successfully ----------------------------------------------------------------
+
+function showNotification(message) {
+    var notification = $('#custom-notification');
+    notification.html(message);
+
+    // Show notification
+    notification.removeClass('hidden').addClass('show');
+
+    // Hide notification after 5 seconds
+    setTimeout(function () {
+        notification.removeClass('show').addClass('hidden');
+    }, 1600);
+}
+
 

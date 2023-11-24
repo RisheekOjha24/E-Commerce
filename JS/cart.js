@@ -60,6 +60,7 @@ function populateCart() {
     updateTotal();
 }
 
+
 // Initial population of the cart
 populateCart();
 
@@ -151,7 +152,7 @@ function updateTotal() {
         total += price;
     });
 
-    $('#cart-total').text('Total: ₹' + total);
+    $('#cart-total').text('Total: ₹ ' + total);
 }
 
 function selectAll(selectAllCheckbox) {
@@ -177,3 +178,152 @@ $('.product-checkbox').on('change', function () {
 $('#select-all').on('change', function () {
     selectAll(this);
 });
+
+// Code to store cart items from local storage to user specific firstore database.
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCqc_mvK2Evq8nwCI6ammO-7fm9CzM-Hd8",
+    authDomain: "auth-form-5cfc3.firebaseapp.com",
+    projectId: "auth-form-5cfc3",
+    storageBucket: "auth-form-5cfc3.appspot.com",
+    messagingSenderId: "499103046125",
+    appId: "1:499103046125:web:b651d029e1fa23466fafe4"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+// Function to check if the user is logged in
+function isLoggedIn() {
+    // Check if the 'isLoggedIn' flag is set in sessionStorage
+    return sessionStorage.getItem('isLoggedIn') === 'true';
+}
+
+// Function to get the authenticated user's ID
+function getAuthenticatedUserId() {
+    
+    var userId = sessionStorage.getItem('uid');
+    return userId;
+   
+}
+
+// Event handler for the "Save Cart" button
+$('#save-cart').on('click', function () {
+    // Check if the user is logged in
+    if (isLoggedIn()) {
+        
+        showNotification('Your items are saved!');
+        // Get the authenticated user's ID
+        var userId = getAuthenticatedUserId();
+      
+        // Access the user's 'Cart' collection in Firestore
+        var userCartRef = firebase.firestore().collection('UserDetails').doc(userId).collection('Cart');
+
+        // Retrieve cart items from local storage
+        var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Clear existing cart data in Firestore
+        userCartRef.get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                doc.ref.delete();
+            });
+
+            // Add new cart items to Firestore
+            cartItems.forEach((item) => {
+                userCartRef.add(item);
+            });
+
+            //showing notification  that your cart-items are saved
+           
+            console.log('Cart data saved to Firestore.');
+        }).catch((error) => {
+            console.error('Error clearing or updating cart data:', error);
+        });
+    } else {
+        // User is not logged in, handle accordingly
+        showNotification('Your are not logged in');
+    }
+});
+
+function showNotification(message) {
+    var notification = $('#custom-notification');
+    notification.html(message);
+
+    // Show notification
+    notification.removeClass('hidden').addClass('show');
+
+    // Hide notification after 5 seconds
+    setTimeout(function () {
+        notification.removeClass('show').addClass('hidden');
+    }, 1200);
+}
+
+
+
+//populate cart when user logged in Code below --------------------------------
+
+    // Check if the user is logged in
+    if (isLoggedIn()) {
+        if (!isCartDataFetched()) {
+            // Get the authenticated user's ID
+            var userId = getAuthenticatedUserId();
+    
+            setCartDataFetchedFlag();
+    
+            // Access the user's 'Cart' collection in Firestore
+            var userCartRef = firebase.firestore().collection('UserDetails').doc(userId).collection('Cart');
+    
+            // Retrieve cart items from Firestore
+            userCartRef.get().then((querySnapshot) => {
+                var existingCartItems = JSON.parse(localStorage.getItem('cart')) || [];
+                var newCartItems = [];
+    
+                // Iterate through documents and convert to array
+                querySnapshot.forEach((doc) => {
+                    var cartItem = doc.data();
+                    newCartItems.push(cartItem);
+                });
+    
+                // Merge existing items with new items
+                var mergedCartItems = mergeCartItems(existingCartItems, newCartItems);
+    
+                // Update local storage with merged cart data
+                localStorage.setItem('cart', JSON.stringify(mergedCartItems));
+    
+                console.log('Cart data retrieved from Firestore and merged with local storage.');
+    
+            }).catch((error) => {
+                console.error('Error retrieving cart data from Firestore:', error);
+            });
+        }
+    } else {
+        console.log("Please login to continue");
+    }
+    
+    // Function to merge cart items
+    function mergeCartItems(existingItems, newItems) {
+        newItems.forEach((newItem) => {
+            var existingItem = existingItems.find(item => item.id === newItem.id);
+            if (existingItem) {
+                existingItem.quantity = newItem.quantity;
+            } else {
+                existingItems.push(newItem);
+            }
+        });
+    
+        return existingItems;
+    }
+    
+    
+
+    function isCartDataFetched() 
+    {
+        // Check if the 'cartDataFetched' flag is set in sessionStorage
+        return sessionStorage.getItem('cartDataFetched') === 'true';
+    }
+
+    function setCartDataFetchedFlag()
+     {
+        // Set the 'cartDataFetched' flag to 'true' in sessionStorage
+        sessionStorage.setItem('cartDataFetched', 'true');
+    }
+

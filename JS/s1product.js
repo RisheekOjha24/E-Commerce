@@ -40,7 +40,7 @@ $(function() {
   // product quanty selection increment - decrement  ends----------------------------------------------------------------
 
 
-  import prodList from './pdetails.mjs';
+  import prodList from './pdetails.js';
 // Fetch product details based on product ID from URL
 var urlParams = new URLSearchParams(window.location.search);
 var productId = urlParams.get('pid');
@@ -134,9 +134,27 @@ if (productId && productType && prodList[productType] && prodList[productType][p
           localStorage.setItem('cart', JSON.stringify(cartItems));
 
           // Inform the user that the item has been added to the cart
-          alert('Item added to cart!');
+          showNotification('product added to cart');
       } else {
           // Handle invalid or missing productId or productType
           console.error('Invalid or missing product ID or product type');
       }
   });
+
+
+
+
+
+
+  function showNotification(message) {
+    var notification = $('#custom-notification');
+    notification.html(message);
+
+    // Show notification
+    notification.removeClass('hidden').addClass('show');
+
+    // Hide notification after 5 seconds
+    setTimeout(function () {
+        notification.removeClass('show').addClass('hidden');
+    }, 800);
+}

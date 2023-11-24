@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="exp.css">
+</head>
+<body>
+  
+     <!-- navbar starts here -->
+     <section class="main-1">
+      <nav class="navbar">
+      
+              <div class="logoA">
+
+                  <a href="../HTML/index.html">
+                      <img src="../images/logo.png" alt="Petals Hub" class="logo_1">
+                  </a>
+
+              </div>
+
+              <ul class="nav_items">
+
+                  <li><a href="../HTML/index.html" >Home</a></li>
+                  <li><a href="../HTML/products.html">Product</a></li>
+                  <li><a href="#">GoodRead</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">About</a></li>
+
+              </ul>
+
+              <div class="logoB">
+                  <a href="#"><img class="logo_3" src="../images/shopbag.png" alt=""></a>
+                  <a href="../HTML/admin.html"><img class="logo_4" src="../images/admin4.png" alt=""></a>
+                  <img class="ham" src="../images/ham.png" alt="Menu">
+                  <img class="cross" src="../images/cross2.png" alt="Close">
+              </div>
+          
+      </nav>
+  </section>
+
+  <!-- navbar ends here common for all -->
+  
+  <section class="circle">
+      <div class="circle-items"><img src="./images/insta.png" alt="">Follow us @Petals_HUB</div>
+      <div class="circle-items"><img src="./images/facebook.png" alt=""></div>
+      <div class="circle-items"><img src="./images/phone.png" alt=""></div>
+      <div class="circle-items"><img src="./images/email.png" alt=""></div>
+  </section>
+
+  
+ 
+  <section class="container">
+    <div class="container-img-box"><img src="./images/ele.png" alt="Contact Image"></div>
+    <div class="form-container">
+        <h2 id="contact-us">Contact Us</h2>
+        <form class="contact-form" onsubmit="return validateForm(event)">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+
+            <button id="submit-btn" type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+
+ <!-- Notification div -->
+ <div id="custom-notification" class="hidden">
+    Your items are saved!
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+crossorigin="anonymous"> </script>
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>`
+<script>
+
+   function validateForm(event){
+    event.preventDefault();
+        showNotification("Message Sent succefuly");
+        setTimeout(function () {
+            window.location.href = "http://127.0.0.1:5501/exp.html";
+    },1400)
+    };
+
+    function showNotification(message) {
+    var notification = $('#custom-notification');
+    notification.html(message);
+
+    // Show notification
+    notification.removeClass('hidden').addClass('show');
+
+    // Hide notification after 5 seconds
+    setTimeout(function () {
+        notification.removeClass('show').addClass('hidden');
+
+    }, 1200);
+
+}
+</script>
+</body>
+
+</html>
