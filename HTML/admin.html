@@ -31,7 +31,7 @@
                       <li><a href="../HTML/products.html">Product</a></li>
                       <li><a href="#">GoodRead</a></li>
                       <li><a href="../HTML/contact.html">Contact</a></li>
-                      <li><a href="#">About</a></li>
+                      <li><a href="../HTML/about.html">About</a></li>
   
                   </ul>
   
@@ -50,13 +50,14 @@
       <div class="container">
         
         <div class="user signinBx">
-          <div class="imgBx"><img src="../images/pots/pA1.png" alt="" /></div>
-          <div class="formBx">
+          <div class="imgBx"><img id="hopegroot" src="../images/hopesgroot.png" alt="" /></div>
+          <div class="formBx" id="formBx-sign-in">
             <form action="" onsubmit="return false;" id="sign-in-form">
               <h1></h1>
               <h2>Sign In</h2>
               <input type="email" name="email-login" placeholder="Email Address"  id="email-login"/>
               <input type="password" name="password-login" placeholder="Password" id="password-login"/>
+              <a href="#" id="forgot-password-link">Forgot Password?</a>
               <input type="submit" name="" value="Login" id="login-btn"/>
               <p class="signup">
                 Don't have an account ?
@@ -67,7 +68,7 @@
           </div>
         </div>
         <div class="user signupBx">
-          <div class="formBx">
+          <div class="formBx" id="formBx-sign-up">
             <form action="" onsubmit="return validateForm(this);" id="sign-up-form" >
                 <h1></h1>
                 <h2>Create an account</h2>
@@ -85,7 +86,7 @@
             </form>
             <!-- Add a container for the logout button -->
           </div>
-          <div class="imgBx"><img src="../images/plants/a3.png" alt="" /></div>
+          <div class="imgBx"><img src="../images/iamgroot.png" alt="" /></div>
         </div>
       </div>
     </section>

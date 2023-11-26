@@ -166,15 +166,13 @@ padding: 10px;
     word-spacing: 8px;
     line-height: 1.4;
     font-weight: bolder;
-    font-family: 'Gabarito';
+    font-family: 'Epilogue';
     text-align: left;
     word-spacing: 20px;
     letter-spacing: 2px;
   
 }
-.downbox h1::first-letter{
-    font-family: 'Zen Dots';
-}
+
 .downbox h1 span{
     color: rgb(25, 250, 85);
     text-shadow: 2px 1px 2px #b4c1c1;
@@ -194,11 +192,9 @@ padding: 10px;
 
     font-weight: lighter;
     font-size: 24px;
-    text-align: left ;
     padding-bottom: 2rem;
     background-color: #F0FCF3;
     letter-spacing: 2px;
-    word-spacing: 4x;
     font-family: 'Lobster Two', sans-serif;
 
 }
@@ -304,173 +300,3 @@ padding: 10px;
 
 /* ------------------------------------------------------------------------ */
 
-/* section main-2 styling starts */
-:root {
-    --Head: #706233;
-    --line: #BA704F;
-  }
-
-.main-2 {
-    width: 100%;
-    background-color: #F0FCF3;
-    padding-top: 2rem; /* Adjust the value as needed */
-}
-.our-product {
-    
-    text-align: center;
-    background-color: #F0FCF3;
-    text-align: center;
-    padding-bottom: 1rem;
-  
-    
-}
-.product-head{
-    padding-top: 2rem;
-    font-family:'Homemade Apple', cursive;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    font-size: 30px;
-    text-align: center;
-    padding-bottom: 2rem;
-    color:var(--Head);
-    
-}
-.product-head::before,
-.product-head::after {
-    display: inline-block;
-    content: "";
-    border-top: 4px solid var(--line);
-    width: 16%;
-    margin: 0.4rem 2%;
-    white-space: nowrap;
-    
-}
-.item-set {
-  
-    display: grid;
-    column-gap: 60px;
-    row-gap: 90px;
-    grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(2, 250px);
-    justify-content: center;
-    padding-bottom: 60px;
-}
-
-.item-btn{
-    position: relative;
-    top:210px;
-    border: 2px solid  rgb(17, 176, 20);
-    padding: 10px 20px 10px 20px;
-    border-radius: 40px; 
-    font-size: 16px;
-    font-weight: bolder;
-    display: inline-block;
-    letter-spacing: 1px;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 rgb(17, 176, 20);
-    background-color: #bdded2b6;
-    transition: ease-in-out 0.4s;
-    margin-bottom: 4rem;
-}
-.item-btn:hover {
-    box-shadow: inset 400px 0 0 0 rgb(17, 176, 20);
-    border-radius: 0px; 
-    color: white;
-   
-  }  
-.item-btn:active{
-    box-shadow: inset 400px 0 0 0 rgb(16, 159, 18);
-    transform: scale(0.98);
-    transition-duration: 0.2ms;
-  }
-.pditem-1{
-    background: url('../images/flowerX.png');
-
-}
-.pditem-2{
-    background: url('../images/artPots.png');
-
-}
-.pditem-3{
-    background: url('../images/seeds.png');
-}
-.pditem-4{
-    background: url('../images/GardenX.png');
-}
-.pditem-5{
-    background: url('../images/ogy.png');
-}
-.pditem-6{
-    background: url('../images/car.png');
-    
-}
-.product-item{
-    min-height: 250px; /* Set a minimum height */
-    width: 200px;
-    border-radius: 100px 100px 20px 20px;
-    background-color: #c0c7c16e;
-    background-size: cover;
-    background-position: center;
- 
-}
- .product-item:hover{
-
-    transform: scale(1.05);
-    background-color:rgba(255, 228, 196, 0.753) ;
-} 
-
-.items-head{
-    position: relative;
-    top:10rem;
-    font-family: 'Calligraffitti',cursive;
-    letter-spacing: 2px;
-}
-/* Media query for screens with a width less than 768px */
-@media screen and (max-width: 768px) {
-    .item-set {
-        grid-template-columns: repeat(2, 200px);
-    }
-}
-
-/* Media query for screens with a width less than 480px */
-@media screen and (max-width: 480px) {
-    .item-set {
-        grid-template-columns: repeat(1, 200px);
-    }
-}
-
-
-/* Section 3 styling starts  */
-
-.main-3{
-
-    background-color: #e0af98;
-    height:180vh;
-}
-
-.why-us{
-    display:flex;
-    padding-top: 6rem;
-    background-color:#F0FCF3
-}
-
-.family-img-box{
-    /* height: 80vh; */
-    flex: 1;
-    background-color:#F0FCF3;
-    border-radius: 50% 50%;
-    box-shadow: inset 200px 0px 20px 0px #42CE82;
-}
-.family-img{
-    width: 390px;
-    height: 520px;
-    float:inline-start;
-
-
- 
-}
-.why-us-para{
-    flex: 1;
-    background-color:#F0FCF3;
-
-}

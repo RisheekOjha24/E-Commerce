@@ -13,7 +13,6 @@
         $(".nav_items").css("right", '-30rem');
         $(".ham").show();
     });
-
     // Function to generate HTML for a product in the cart
 // Function to generate HTML for a product in the cart
 function generateProductHTML(product) {

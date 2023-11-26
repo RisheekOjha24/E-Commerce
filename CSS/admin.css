@@ -21,8 +21,6 @@ html,body
 .navbar{
 
     height:16vh;
-   
-    /* background-color: rgb(82, 223, 236); */
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -46,7 +44,6 @@ html,body
     gap:4px;
     margin-right:1rem;
     margin-left: 8rem;
-    /* background-color: #b4c1c1; */
 }
 .nav_items>li{
 
@@ -273,6 +270,7 @@ section .container .user .formBx {
   transition: 0.5s;
 }
 
+
 section .container .user .formBx form h2 {
   font-size: 18px;
   font-weight: 600;
@@ -301,13 +299,14 @@ section .container .user .formBx form input {
 
 section .container .user .formBx form input[type='submit'] {
   max-width: 100px;
-  background: #677eff;
+  background: linear-gradient(to left,#1bda34,#43d5a2);
   color: #fff;
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1px;
   transition: 0.5s;
+  margin-top: 1rem;
 }
 
 section .container .user .formBx form .signup {
@@ -317,7 +316,7 @@ section .container .user .formBx form .signup {
   letter-spacing: 1px;
   color: #555;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: bolder;
 }
 
 section .container .user .formBx form .signup a {
@@ -381,7 +380,16 @@ section .container.active .signinBx .imgBx {
   }
 }
 
-
+#forgot-password-link{
+  display: block;
+  color:rgb(29, 86, 201);
+  font-size: 14px;
+  margin-top: 6px;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-family:"Arial",sans-serif;
+}
 #custom-notification {
   position: fixed;
   top: 4px;

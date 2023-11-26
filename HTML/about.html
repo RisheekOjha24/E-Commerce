@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/about.css" />
+  </head>
+  <body>
+    <!-- navbar starts here -->
+
+    <nav class="navbar">
+      <div class="logoA">
+        <a href="../HTML/index.html">
+          <img src="../images/logo.png" alt="Petals Hub" class="logo_1" />
+        </a>
+      </div>
+
+      <ul class="nav_items">
+        <li><a href="../HTML/index.html">Home</a></li>
+        <li><a href="../HTML/products.html">Product</a></li>
+        <li><a href="#">GoodRead</a></li>
+        <li><a href="../HTML/contact.html">Contact</a></li>
+        <li><a href="#" class="act">About</a></li>
+      </ul>
+
+      <div class="logoB">
+        <a href="../HTML/cart.html"
+          ><img class="logo_3" src="../images/shopbag.png" alt=""
+        /></a>
+        <a href="#"><img class="logo_4" src="../images/admin4.png" alt="" /></a>
+        <img class="ham" src="../images/ham.png" alt="Menu" />
+        <img class="cross" src="../images/cross2.png" alt="Close" />
+      </div>
+    </nav>
+
+    <!-- navbar section ends here -->
+
+    <section class="box1">
+      <div class="img1-box"><img src="../images/swagpanda.png" alt="" /></div>
+
+      <div class="our-history">
+        <h1>Our Mission</h1>
+        <ul>
+          <li>
+            Cultivate a community of passionate gardeners and home decor
+            enthusiasts.
+          </li>
+          <li>
+            We aim to provide a one-stop destination for high-quality gardening
+            products and aesthetically pleasing home decor items
+          </li>
+        </ul>
+      </div>
+      <img class="wall" src="../images/wall mounted.png" alt="" />
+    </section>
+
+    <section class="box2">
+      <div class="half-box">
+        <div class="why-us">
+          <h1>Why Us</h1>
+          <ul>
+            <li>Customer Satisfaction</li>
+            <li>Product Diversity</li>
+            <li>Sustainability Initiatives</li>
+            <li>Community Engagement</li>
+            <li>Carousel of Seasons</li>
+          </ul>
+        </div>
+
+        <div class="petals-hub">
+          At Petals Hub, we invite you to embark on a digital journey that
+          transcends ordinary online shopping. Our website is a testament to the
+          fusion of creativity and functionality, offering you an immersive
+          experience in the world of gardening and home decor.
+        </div>
+      </div>
+      <div class="family-img-box">
+        <img class="family-img" src="../images/father.png" alt="Plant tress" />
+      </div>
+
+      <div class="circle"></div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(".ham").on("click", function() {
+        $(".ham").hide();
+        $(".nav_items").css("right",'0');
+        setTimeout(function() {
+            $(".cross").show();
+        }, 400);
+    });
+
+    $(".cross").on("click", function() {
+        $(".cross").hide();
+        $(".nav_items").css("right",'-30rem');
+        $(".ham").show();
+    });
+    </script>
+  </body>
+</html>

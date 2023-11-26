@@ -25,13 +25,13 @@
                   <li><a href="../HTML/index.html" >Home</a></li>
                   <li><a href="../HTML/products.html">Product</a></li>
                   <li><a href="#">GoodRead</a></li>
-                  <li><a href="../HTML/contact.html">Contact</a></li>
-                  <li><a href="#">About</a></li>
+                  <li><a href="#" class="act">Contact</a></li>
+                  <li><a href="../HTML/about.html">About</a></li>
 
               </ul>
 
               <div class="logoB">
-                  <a href="#"><img class="logo_3" src="../images/shopbag.png" alt=""></a>
+                  <a href="../HTML/cart.html"><img class="logo_3" src="../images/shopbag.png" alt=""></a>
                   <a href="../HTML/admin.html"><img class="logo_4" src="../images/admin4.png" alt=""></a>
                   <img class="ham" src="../images/ham.png" alt="Menu">
                   <img class="cross" src="../images/cross2.png" alt="Close">
@@ -42,11 +42,11 @@
 
   <!-- navbar ends here common for all -->
   
-  <section class="circle">
-      <div class="circle-items"><img src="./images/insta.png" alt="">Follow us @Petals_HUB</div>
-      <div class="circle-items"><img src="./images/facebook.png" alt=""></div>
-      <div class="circle-items"><img src="./images/phone.png" alt=""></div>
-      <div class="circle-items"><img src="./images/email.png" alt=""></div>
+  <section class="circle-box">
+      <div class="circle-items"><a href="https://www.instagram.com"><img src="../images/insta.png" alt=""></a>Follow us @Petals_HUB</div>
+      <div class="circle-items"><a href="https://www.facebook.com"><img src="../images/facebook.png" alt=""></a>Find us @Petals_HUB</div>
+      <div class="circle-items"><a href="#"><img src="../images/phone.png" alt=""></a>Call us +123-432-345</div>
+      <div class="circle-items"><a href="#"><img src="../images/email.png" alt=""></a>Email us petalsHUb@gmail.com</div>
   </section>
 
   
@@ -70,7 +70,6 @@
     </div>
 </section>
 
-
  <!-- Notification div -->
  <div id="custom-notification" class="hidden">
     Your items are saved!
@@ -78,14 +77,28 @@
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
 crossorigin="anonymous"> </script>
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>`
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
 <script>
+ // Navbar responsive menu code
+ $(".ham").on("click", function () {
+        $(".ham").hide();
+        $(".nav_items").css("right", '0');
+        setTimeout(function () {
+            $(".cross").show();
+        }, 400);
+    });
+
+    $(".cross").on("click", function () {
+        $(".cross").hide();
+        $(".nav_items").css("right", '-30rem');
+        $(".ham").show();
+    });
 
    function validateForm(event){
     event.preventDefault();
         showNotification("Message Sent succefuly");
         setTimeout(function () {
-            window.location.href = "http://127.0.0.1:5501/exp.html";
+            window.location.href = "../HTML/contact.html";
     },1400)
     };
 

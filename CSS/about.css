@@ -14,7 +14,7 @@ html,body
 {
     width:100%;
     height:100%;
-    background-color:rgba(14, 163, 54, 0.662);
+
 }
 
 .navbar{
@@ -184,193 +184,133 @@ padding: 10px;
     }
 }
 /* Navbar styling finished */
-
-
-/* Form coding starts here */
-
-.circle-box{
-    display: flex;
-    justify-content: space-around;
-    overflow: hidden; 
-    padding: 1rem 1rem 0 1rem;
+section{
     background-color: #F0FCF3;
 }
+.box1{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.our-history{
+    background-color: #F0FCF3;
+    flex: 1.5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
-.circle-items {
-    width: 100px;
-    height: 60px;
-    padding-bottom: 2.5rem;
-    background-color:#F0FCF3;
-    border-radius: 50%;
-    opacity: 0; /* Start with 0 opacity */
-    transform: translateX(-100%); /* Start position outside the circle */
-    animation: slideIn 0.8s forwards ease-out; /* Animation duration and easing */
+.our-history>h1{
     text-align: center;
-    font-size: 12px;
-    font-family: Gabarito;
+    margin: 2rem;
+    margin-bottom: 0;
+    font-size: 28px;
+    font-family: 'Special Elite', 'Helvetica Neue', Helvetica, Arial;
+
 }
 
-.circle-items:nth-child(2) {
-    animation-delay: 0.3s; /* Delay for the second circle */
+
+.our-history>ul{
+    text-align: left;
+    font-size: 22px;
+    font-family: 'Playpen Sans','Helvetica Neue',Arial,sans-serif;
+}
+.our-history>ul>li{
+    padding: 2rem;
 }
 
-.circle-items:nth-child(3) {
-    animation-delay: 0.5s; /* Delay for the third circle */
-}
 
-.circle-items:nth-child(4) {
-    animation-delay: 0.7s; /* Delay for the fourth circle */
-}
-
-.circle-items>a>img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-.circle-items>a>img:hover{
-    transform: scale(1.1);
-    filter:sepia(100%);
-}
-
-@keyframes slideIn {
-    to {
-        opacity: 1; /* Fade in */
-        transform: translateX(0); /* Slide to the original position */
-    }
-}
-section.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 60px;
-    background:linear-gradient(to bottom,#F0FCF3 80%,#69be7e);
-}
-
-.form-container {
-    max-width: 600px;
+.img1-box{
+    background-color:#F0FCF3;
     flex: 1;
-    padding: 20px;
-    background-color: rgb(210, 223, 210);
-
-    border-radius: 10px;
-    border: 2px solid #aeabab;
+    
 }
-
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
+.img1-box>img{
+   margin-top:1rem ;
+    width:18rem;
+    height: 36rem;
+    margin-left: 2rem;
 }
-.container-img-box{
-   flex: 1;
-   max-width: 600px;
-  height:600px;
-   margin: 1rem;
+.wall{
+    position: absolute;
+    right: -4rem;
+    display: none;
 }
-.container-img-box img{
-    width:100%;
-    height:100%;
-}
-.contact-form label {
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-family: 'Belanosima';
-    letter-spacing: 2px;
+@media (max-width: 768px) {
 
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 26px;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    box-sizing: border-box;
-    outline: none;
-    font-family: 'Belanosima';
-    font-size: 18px;
-    color:rgb(45, 108, 133);
-}
-
-button{
-    color:rgb(17, 176, 20);;
-    background-color:#F0FCF3;
-    border: 2px solid  rgb(17, 176, 20);
-    padding: 10px 20px 10px 20px;
-    border-radius: 40px;
-    width: 100px;
-    margin: 1rem auto;
-    font-size: 16px;
-    font-weight: bolder;
-    display: inline-block;
-    letter-spacing: 1px;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 rgb(17, 176, 20);
-    transition: ease-in-out 0.4s;
-    margin-bottom: 0rem;
- 
-  }
-  button:hover {
-    box-shadow: inset 400px 0 0 0 rgb(17, 176, 20);
-    border-radius: 0px; 
-    color: white;
-  }  
-  button:active{
-    box-shadow: inset 400px 0 0 0 rgb(16, 159, 18);
-    transform: scale(0.98);
-    transition-duration: 0.2ms;
-  }
-
-#contact-us{
-
-    margin: 1rem 0 2rem 0;
-    text-align: center;
-    font-family: 'Pacifico';
-    font-size: 21px;
-    word-spacing: 2px;
-}
-textarea{
-    resize: none;
-}
-@media screen and (max-width: 1024px) {
-    section.container {
+    .box1{
         flex-direction: column;
     }
-
-    .form-container {
-        width: 100%;
-        margin-top:0;
-    }
-  
+    
 }
 
 
-#custom-notification {
-    position: fixed;
-    top: 4px;
-    left: 50%;
-    transform: translateX(-50%);
-    background:linear-gradient(to bottom,#06be68bd 40%,#2b5a60c5 60%);
-    color:white;
-    font-weight: bold;
-    padding: 10px 25px;
+.box2{
+    /* height: 100vh; */
+    background-color:#F0FCF3;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
+}
+.half-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    gap:40px;
+}
+.petals-hub{
+    font-family: 'Merienda';
+    padding: 20px 50px;
     font-size: 18px;
-    letter-spacing:1px;
-    font-family:'Montserrat', 'Helvetica Neue';
-    transition: opacity 0.5s ease-in-out;
-    z-index: 10;
-  }
-  #custom-notification.show {
-    opacity: 1;
-  }
+    box-sizing: border-box;
+    text-align: justify;
+    order:1;
+    margin-top: 2rem;
+}
+.why-us{
   
-  #custom-notification.hidden {
-    display: none;
-  }
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:5rem; 
+    /* margin-top: 4rem; */
+    order: 2;
+}
 
-  
+.why-us h1{
+    font-size: 28px;
+    font-family: 'Special Elite', 'Helvetica Neue', Helvetica, Arial;
+    margin: 2rem;
+    white-space: nowrap;
+}
+.why-us ul{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Playpen Sans','Helvetica Neue',Arial,sans-serif;
+}
+
+.family-img-box {
+    text-align: right;
+    position: relative;
+    /* background-color: #fff; */
+}
+.family-img-box img{
+    border-radius: 50%;
+}
+
+@media (max-width: 780px) {
+    .box2{
+        flex-direction: column;
+    }
+}
+@media (max-width: 480px) {
+    .family-img-box img{
+            width:100%;
+            height:100%;
+    }
+}

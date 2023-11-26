@@ -130,9 +130,7 @@ $("#sign-up-form").css({
      height:"4rem",// Revert to the original height
     
 }, 1000); // Adjust the duration of the animation as needed (in milliseconds)
-$(".formBx").css({
-    "background": "linear-gradient(45deg, #acb6e5, #86fde8)",
-})
+
 
 $("#sign-up-form .signup").text("Your acconut is created ? ");
 $("#sign-up-form .signup").append("<a href='#' onclick='toggleForm();'>Sign in</a>");
@@ -181,7 +179,7 @@ submitButton.on('click', function () {
             // Sign in successful
             var user = userCredential.user;
             console.log("Congratulations, " + ", you are logged in as " + user.email);
-           
+            
             // localStorage.clear();
             // Fetch and store the username
             fetchUserName(user.uid)
@@ -212,7 +210,7 @@ function showLoggedInState(userName) {
     var oHeight = $("#sign-in-form").height();
 
     // Remove input elements and change CSS properties
-    $('#sign-in-form input,#sign-in-form h2,#sign-in-form .signup').remove();
+    $('#sign-in-form input,#sign-in-form h2,#sign-in-form .signup,#forgot-password-link').remove();
 
     // Animate the transition
     $("#sign-in-form").css({
@@ -226,8 +224,8 @@ function showLoggedInState(userName) {
         height: "4rem", // Revert to the original height
     }, 1000); // Adjust the duration of the animation as needed (in milliseconds)
 
-    $(".formBx").css({
-        "background": "linear-gradient(45deg, #acb6e5, #86fde8)",
+    $("#formBx-sign-in").css({
+        "background":"linear-gradient(to right,rgb(209, 236, 222),rgba(57, 220, 190, 0.548))"
     })
 
     setTimeout(function () {
@@ -308,3 +306,20 @@ function showNotification(message) {
 }
 
 
+
+// Forgot Password link click event
+$("#forgot-password-link").click(function() {
+    var email = prompt("Please enter your email:");
+
+    if (email) {
+        // Send password reset email
+        firebase.auth().sendPasswordResetEmail(email)
+            .then(function() {
+                showNotification('Password reset email sent. Check your inbox.');
+            })
+            .catch(function(error) {
+                console.error('Error sending password reset email:', error);
+                showNotification('Error sending password reset email. Please try again.');
+            });
+    }
+});
