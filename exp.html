@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #cart-page {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #payment-form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #payment-form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        #payment-form input,
+        #payment-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        #credit-card-details,
+        #upi-details {
+            display: none;
+        }
+
+        #submit-payment {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #cart-total {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cart-page">
+        <div class="total" id="cart-total">Total: ₹ 0</div>
+        <!-- Your cart content goes here -->
+        <p>Cart items go here...</p>
+        <button id="proceed-button">Click to Proceed</button>
+    </div>
+
+    <div id="payment-form" style="display: none;">
+        <div class="total" id="cart-total">Total: ₹ 0</div>
+        <h2>Payment Details</h2>
+        <form id="payment-details-form">
+            <label for="payment-method">Select Payment Method:</label>
+            <select id="payment-method">
+                <option value="credit-card">Credit Card</option>
+                <option value="upi">UPI</option>
+            </select>
+
+            <div id="credit-card-details" class="payment-details">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="Enter card number">
+
+                <label for="expiry-date">Expiry Date</label>
+                <input type="text" id="expiry-date" placeholder="MM/YY">
+
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" placeholder="CVC">
+            </div>
+
+            <div id="upi-details" class="payment-details">
+                <label for="upi-id">UPI ID</label>
+                <input type="text" id="upi-id" placeholder="Enter UPI ID">
+            </div>
+
+            <button type="button" id="submit-payment">Submit Payment</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).on('click', '#proceed-button', function() {
+            // Hide the cart and show the payment form
+            $("#cart-page").hide();
+            $("#payment-form").show();
+
+            // Update and display the total amount
+            updateTotalAmount();
+        });
+
+        $(document).on('change', '#payment-method', function() {
+            // Hide all payment details divs
+            $(".payment-details").hide();
+
+            // Show the selected payment details div
+            $("#" + $(this).val() + "-details").show();
+        });
+
+        $(document).on('click', '#submit-payment', function() {
+            // Perform any client-side validation if needed
+            // For a real implementation, you would send this data to the server
+            // for further processing and integration with a payment gateway
+            alert("Payment submitted successfully!");
+        });
+
+        function updateTotalAmount() {
+            // Perform logic to calculate the total amount (for example, fetch it from the cart)
+            var totalAmount = 100; // Replace with your actual logic
+
+            // Update the total amount in both places
+            $("#cart-total").text("Total: ₹ " + totalAmount);
+            $("#payment-form #cart-total").text("Total: ₹ " + totalAmount);
+        }
+    </script>
+</body>
+</html>

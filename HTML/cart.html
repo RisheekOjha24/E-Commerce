@@ -99,7 +99,42 @@
         Your items are saved!
     </div>
 
+    
 
+    <div id="payment-div">
+        <!-- Hidden payment form -->
+        <div id="payment-form">
+            <!-- Payment option dropdown -->
+            <label for="payment-method">Select Payment Method:</label>
+            <select id="payment-method">
+                <option value="chose">Payment method</label>
+                <option value="upi">UPI</option>
+                <option value="card">Credit/Debit Card</option>
+            </select>
+    
+            <!-- UPI payment form -->
+            <div id="upi-form" class="hidden">
+                <label for="upi-id">UPI ID:</label>
+                <input type="text" id="upi-id" placeholder="Enter UPI ID">
+            </div>
+    
+            <!-- Credit/Debit card payment form -->
+            <div id="card-form" class="hidden">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="Enter Card Number">
+                <label for="expiry-date">Expiry Date</label>
+                <input type="text" id="expiry-date" placeholder="MM/YYYY">
+                <label for="ccv">CCV</label>
+                <input type="text" id="ccv" placeholder="Enter CCV">
+            </div>
+        </div>
+        <div class="amt-payment">Bill: <span></span></div>
+        <img  class="cross-icon" src="../images/cross2.png" alt="">
+        <button id="submit-payment">Confirm</button>
+    </div>
+    
+
+    
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../JS/cart.js" ></script>
 </body>

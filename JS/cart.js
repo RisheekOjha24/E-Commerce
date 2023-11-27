@@ -326,3 +326,86 @@ function showNotification(message) {
         sessionStorage.setItem('cartDataFetched', 'true');
     }
 
+//Payment gateway code
+$('.checkout-btn').on('click', function () {
+    var totalAmount = parseFloat($('#cart-total').text().replace('Total: ₹ ', ''));
+
+    
+    // Check if the user is logged in
+    if (!isLoggedIn()) {
+        showNotification('You are not logged in');
+        return;
+    }
+
+    // Check if the total amount is zero or less
+    if (totalAmount <= 0) {
+        showNotification('Please add items to the cart');
+    } else {
+        $('#payment-div').css('display', 'block');
+
+        var bill = $('#cart-total').text();
+        var billnumPart = bill.replace('Total: ₹', '').trim();;
+    
+        $('.amt-payment span').text('₹'+billnumPart);
+        // Event listener for payment method selection
+        $('#payment-method').on('change', function () {
+            var selectedMethod = $(this).val();
+            updatePaymentForm(selectedMethod);
+        });
+    }
+});
+
+$('.cross-icon').on('click', function () {
+
+    $('#payment-div').css('display', 'none');
+
+});
+
+
+// Event listener for submitting payment
+$(document).on('click', '#submit-payment', function () {
+    var totalAmount = parseFloat($('#cart-total').text().replace('Total: ₹ ', ''));
+    var selectedPaymentMethod = $('#payment-method').val();
+    var paymentDetails = {};
+
+    // Get payment details based on the selected payment method
+    if (selectedPaymentMethod === 'upi') {
+        paymentDetails.upiId = $('#upi-id').val();
+        if (!paymentDetails.upiId) {
+            showNotification('Please enter UPI ID');
+            return;
+        }
+    } else if (selectedPaymentMethod === 'card') {
+        paymentDetails.cardNumber = $('#card-number').val();
+        paymentDetails.expiryDate = $('#expiry-date').val();
+        paymentDetails.ccv = $('#ccv').val();
+        if (!paymentDetails.cardNumber || !paymentDetails.expiryDate || !paymentDetails.ccv) {
+            showNotification('Please fill all credit/debit card fields');
+            return;
+        }
+    }
+    else{
+        showNotification('Please select the payment method');
+        return;
+    }
+
+    // Perform payment processing logic here
+
+    $('#payment-div').css('display', 'none');
+    showNotification('Payment Successful');
+});
+
+// Function to update payment form based on the selected payment method
+function updatePaymentForm(method) {
+    // Hide all payment forms
+    $('#upi-form').addClass('hidden');
+    $('#card-form').addClass('hidden');
+
+    // Show the selected payment form
+    if (method === 'upi') {
+        $('#upi-form').removeClass('hidden');
+    } else if (method === 'card') {
+        $('#card-form').removeClass('hidden');
+    }
+}
+

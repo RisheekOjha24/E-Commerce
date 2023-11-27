@@ -13,6 +13,7 @@ html,body
 {
     width:100%;
     height:100%;
+    background-color: #F0FCF3;
 }
 
 .navbar{
@@ -298,13 +299,16 @@ padding: 10px;
  .select-all {
      margin-bottom:2rem;
      font-size: 20px;
-     font-family:Montserrat;
      font-weight: 700;
+
+     
  }
  #select-all{
      width:20px; 
      height:20px;
      margin-left:1rem;
+    position: relative;
+    top:4px;
  }
 .product-checkbox{
     width: 20px;
@@ -409,7 +413,7 @@ padding: 10px;
     letter-spacing:1px;
     font-family:'Montserrat', 'Helvetica Neue';
     transition: opacity 0.5s ease-in-out;
-    z-index: 10;
+    z-index: 120;
  }
  #custom-notification.show {
     opacity: 1;
@@ -417,4 +421,113 @@ padding: 10px;
 
 #custom-notification.hidden {
     display: none;
+}
+
+
+
+
+/* Payment gateway */
+#payment-div {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:45;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow:2px 2px 2px #0cab90;
+    background:linear-gradient(45deg,#7F7FD5,#86A8E7,#91EAE4);
+}
+
+#payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    padding:30px;
+    max-width: 250px;
+    align-items: center;
+    justify-content:space-evenly;
+    position: relative;
+}
+
+#payment-method {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+
+label {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 15px;    
+    font-size: 14px;
+}
+
+#submit-payment {
+    margin:10px;   
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-size: 16px;
+    /* font-family:'Righteous', sans-serif; */
+}
+#submit-payment:hover{
+    background:linear-gradient(45deg,#DE6262,#943e09);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+.cross-icon{
+    position: absolute;
+    width:30px; 
+    height:30px;
+    top:15px;
+    right: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.cross-icon:hover{
+    filter: invert();
+    border: 2px solid white;
+    background-color: #c6d3dc;
+    border-radius: 50%;
+}
+
+.amt-payment{
+    font-size: 18px;
+
+}
+.amt-payment span{
+    letter-spacing: 1px;
+}
+
+@media (max-width:760px) {
+
+    #payment-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding:40px;
+       min-width: 250px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
 }
