@@ -193,8 +193,7 @@ padding: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    /* max-width: 1200px; */
-    padding: 40px 120px;
+    padding: 80px 120px;
     justify-content: center;
     background: linear-gradient(to bottom,  #F0FCF3 , rgba(48, 197, 102, 0.233) );
 }
