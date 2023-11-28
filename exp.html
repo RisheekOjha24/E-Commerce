@@ -3,134 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Gateway</title>
-
+    <title>Document</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+        /* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
 
-        #cart-page {
-            text-align: center;
-            margin-top: 50px;
-        }
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
-        #payment-form {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            text-align: center;
-        }
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
 
-        #payment-form label {
-            display: block;
-            margin-bottom: 8px;
-        }
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
 
-        #payment-form input,
-        #payment-form select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-        }
+.footer-box{
+    list-style: none;
+    padding: 0;
+}
 
-        #credit-card-details,
-        #upi-details {
-            display: none;
-        }
+.footer-box li{
+    margin-bottom: 8px;
+}
 
-        #submit-payment {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+.footer-link{
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
 
-        #cart-total {
-            margin-bottom: 20px;
-        }
+.footer-link:hover {
+    color: #fdb813;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+}
+#phone{
+    width:100px;
+    height:200px;
+}
     </style>
 </head>
 <body>
-
-    <div id="cart-page">
-        <div class="total" id="cart-total">Total: ₹ 0</div>
-        <!-- Your cart content goes here -->
-        <p>Cart items go here...</p>
-        <button id="proceed-button">Click to Proceed</button>
-    </div>
-
-    <div id="payment-form" style="display: none;">
-        <div class="total" id="cart-total">Total: ₹ 0</div>
-        <h2>Payment Details</h2>
-        <form id="payment-details-form">
-            <label for="payment-method">Select Payment Method:</label>
-            <select id="payment-method">
-                <option value="credit-card">Credit Card</option>
-                <option value="upi">UPI</option>
-            </select>
-
-            <div id="credit-card-details" class="payment-details">
-                <label for="card-number">Card Number</label>
-                <input type="text" id="card-number" placeholder="Enter card number">
-
-                <label for="expiry-date">Expiry Date</label>
-                <input type="text" id="expiry-date" placeholder="MM/YY">
-
-                <label for="cvc">CVC</label>
-                <input type="text" id="cvc" placeholder="CVC">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 >About Us</h3>
+                <img id="phone" src="../Petals-Hub/images/iphone.png" alt="">
+                <p>Discover the beauty of nature with our wide range of plants. We are passionate about providing quality and sustainable green solutions for every home.</p>
             </div>
-
-            <div id="upi-details" class="payment-details">
-                <label for="upi-id">UPI ID</label>
-                <input type="text" id="upi-id" placeholder="Enter UPI ID">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-box">
+                    <li><a class="footer-link" href="#">Home</a></li>
+                    <li><a class="footer-link" href="#">Shop</a></li>
+                    <li><a class="footer-link" href="#">Blog</a></li>
+                    <li><a class="footer-link" href="#">Contact Us</a></li>
+                </ul>
             </div>
-
-            <button type="button" id="submit-payment">Submit Payment</button>
-        </form>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-        $(document).on('click', '#proceed-button', function() {
-            // Hide the cart and show the payment form
-            $("#cart-page").hide();
-            $("#payment-form").show();
-
-            // Update and display the total amount
-            updateTotalAmount();
-        });
-
-        $(document).on('change', '#payment-method', function() {
-            // Hide all payment details divs
-            $(".payment-details").hide();
-
-            // Show the selected payment details div
-            $("#" + $(this).val() + "-details").show();
-        });
-
-        $(document).on('click', '#submit-payment', function() {
-            // Perform any client-side validation if needed
-            // For a real implementation, you would send this data to the server
-            // for further processing and integration with a payment gateway
-            alert("Payment submitted successfully!");
-        });
-
-        function updateTotalAmount() {
-            // Perform logic to calculate the total amount (for example, fetch it from the cart)
-            var totalAmount = 100; // Replace with your actual logic
-
-            // Update the total amount in both places
-            $("#cart-total").text("Total: ₹ " + totalAmount);
-            $("#payment-form #cart-total").text("Total: ₹ " + totalAmount);
-        }
-    </script>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <ul class="footer-box">
+                    <li><a class="footer-link" href="#">Facebook</a></li>
+                    <li><a class="footer-link" href="#">Instagram</a></li>
+                    <li><a class="footer-link" href="#">Twitter</a></li>
+                    <li><a class="footer-link" href="#">Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Email: info@yourwebsite.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Your Website. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
 </body>
 </html>

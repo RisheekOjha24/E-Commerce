@@ -295,6 +295,10 @@ padding: 10px;
      cursor: pointer;
      font-size: 18px;
      margin-top: 20px;
+
+ }
+ .checkout-btn:hover{
+    background-color:  rgba(58, 150, 61, 0.989)
  }
  .select-all {
      margin-bottom:2rem;

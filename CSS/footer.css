@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Pacifico&family=Righteous&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Edu+TAS+Beginner&family=Playpen+Sans&family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Gabarito:wght@700&family=Zen+Dots&family=Homemade+Apple&family=Epilogue:wght@900&family=Merienda:wght@500&display=swap');
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-box{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-box li{
+    margin-bottom: 8px;
+}
+
+.footer-link{
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+    color: #fdb813;
+}
+
+.footer-box li img{
+    width:30px;
+    height:26px;
+    position: relative;
+    top:8px;
+    left: 10px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+}
+#babypanda{
+    width:280px;
+    height:250px;
+}
+#sidePlant{
+    width:180px;
+    height:200px;
+    position: absolute;
+    bottom: 1rem;
+    transform: rotate(90deg);
+}
+
+.imgbox{
+    width:100%;
+    text-align: center;
+
+}
+#pinX{
+    filter: brightness(2.8);
+}
+.logoImg{
+    width:30px;
+    height:30px;
+    padding:2px 8px;
+}
+
+@media (max-width:800px) {
+    #sidePlant{
+        display: none;
+    }
+    .footer-container{
+        flex-wrap: wrap;
+    }
+}

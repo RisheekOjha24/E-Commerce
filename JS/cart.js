@@ -385,7 +385,7 @@ $(document).on('click', '#submit-payment', function () {
         }
     }
     else{
-        showNotification('Please select the payment method');
+        showNotification('Please choose a payment method');
         return;
     }
 
@@ -393,6 +393,7 @@ $(document).on('click', '#submit-payment', function () {
 
     $('#payment-div').css('display', 'none');
     showNotification('Payment Successful');
+
 });
 
 // Function to update payment form based on the selected payment method
