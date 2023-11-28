@@ -322,9 +322,8 @@ section{
 
 /* footer section starts here */
 .margin{
-    width: 100vw;
     background-color: #F0FCF3;
-    height: 40vh;
+    height: 30vh;
 
 }
 
