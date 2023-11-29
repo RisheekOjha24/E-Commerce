@@ -92,15 +92,15 @@ var prodList = {
   },
   pots:
   {
-      p1:{
-        name: "Artificial Asparagus Groot Pots",
-        oprice: 1290,
-        nprice: 1200,
-        description:"Bring the magic of the Marvel universe to your home with our stunning set of two artificial Asparagus Mary Plants, presented in unique resin pots featuring the bust of beloved character Groot. These faux plants symbolize strength and resilience, making them a perfect choice for couples who share a strong bond",
-        mainImg: "../images/pots/pA1.png",
-        smallImg1: "../images/pots/pA1.png",
-        smallImg2: "../images/pots/pa2.png",
-        smallImg3: "../images/pots/pa3.png"
+    p1:{
+        name: "Heraldry Vase Taper",
+        oprice: 1600,
+        nprice: 1269,
+        description:"Our Heraldry Vase Taper Planter is made of lightweight and durable fibre material making it perfect for indoor gardens. The surface is textured to give a premium 3 dimensional feel of depth to the planter.",
+        mainImg: "../images/pots/pf1.png",
+        smallImg1: "../images/pots/pf1.png",
+        smallImg2: "../images/pots/pf2.png",
+        smallImg3: "../images/pots/pf3.png"
       },
 
       p2:{
@@ -112,7 +112,70 @@ var prodList = {
         smallImg1: "../images/pots/pb1.png",
         smallImg2: "../images/pots/pb2.png",
         smallImg3: "../images/pots/pb3.png"
-      }
+      },
+
+      p3:{
+        name: "Pipe Ceramic Pot",
+        oprice: 449,
+        nprice: 399,
+        description:"Special plants deserve special planters and beautiful homes always have a corner for stunning planters. Made or premium grade ceramic with a beautiful glaze the planter instantly adds a fun colour to your home garden. The cylindrical shape with a weighted base ensures that the planter can be kept on almost any flat surface without the fear of toppling over. The blue ikat motif is quintessentially indian chic for any modern home.",
+        mainImg: "../images/pots/pc1.png",
+        smallImg1: "../images/pots/pc1.png",
+        smallImg2: "../images/pots/pc2.png",
+        smallImg3: "../images/pots/pc3.png"
+      },
+      
+      p4:{
+        name: "Foster linic Pot",
+        oprice: 689,
+        nprice: 599,
+        description:"Our Frosted Ceramic Pot is set to be every plant and home decor lover’s favourite ceramic pot. A stunning addition to any plant lover's collection, it is crafted from high-quality glazed ceramic, this planter boasts a premium finish that exudes elegance and style.",
+        mainImg: "../images/pots/pd1.png",
+        smallImg1: "../images/pots/pd1.png",
+        smallImg2: "../images/pots/pd2.png",
+        smallImg3: "../images/pots/pd3.png"
+      },
+      p5:{
+        name: "Zuri Vase ball Rib",
+        oprice: 999,
+        nprice: 899,
+        description:"Celebrating retro in every form, this disco ball planter is a call to the fun times. Our Vase ball Rib planter is made of lightweight and durable fibre material making it perfect for indoor gardens. They are easy to clean and move around and the circular shape accentuates all foliage shapes and sizes. It can also be easily fitted into a macrame planter and turned into a hanging planter. The colour adds the perfect amount of minimalist Scandinavian touch to your home garden.",
+        mainImg: "../images/pots/pe1.png",
+        smallImg1: "../images/pots/pe1.png",
+        smallImg2: "../images/pots/pe2.png",
+        smallImg3: "../images/pots/pe3.png"
+      },
+      p6:{
+        name: "Artificial Asparagus Groot Pots",
+        oprice: 1290,
+        nprice: 1200,
+        description:"Bring the magic of the Marvel universe to your home with our stunning set of two artificial Asparagus Mary Plants, presented in unique resin pots featuring the bust of beloved character Groot. These faux plants symbolize strength and resilience, making them a perfect choice for couples who share a strong bond",
+        mainImg: "../images/pots/pA1.png",
+        smallImg1: "../images/pots/pA1.png",
+        smallImg2: "../images/pots/pa2.png",
+        smallImg3: "../images/pots/pa3.png"
+      },
+      
+      p7:{
+        name: "Milano Short Planter",
+        oprice: 3499,
+        nprice: 2890,
+        description:"The Milano planter has been designed and crafted in a timeless shape and a unique surface finish to elevate and garden to the next level. If you are someone who loves the ease of use of plastic or fibre planters then you will love the Milano planter made from recyclable polymers that make it extremely lightweight, durable, weather proof, as well as lend it a luxurious finish to fit right into any setting.",
+        mainImg: "../images/pots/pg1.png",
+        smallImg1: "../images/pots/pg1.png",
+        smallImg2: "../images/pots/pg2.png",
+        smallImg3: "../images/pots/pg3.png"
+      },
+      p8:{
+        name: "Pebble Planter",
+        oprice: 1999,
+        nprice: 1000,
+        description:"Add zen to your garden with our pebble planter. Designed to be a part of the Japanese Zen garden, our pebble planters look stunning as a part of landscaped gardens. The planter is extremely lightweight and durable in all weather conditions and can be used both as an indoor planter as well as an outdoor planter. The pebble planter i made of completely recyclable polymers that lend it both strength and a realistic stonefinish.",
+        mainImg: "../images/pots/ph1.png",
+        smallImg1: "../images/pots/ph1.png",
+        smallImg2: "../images/pots/ph2.png",
+        smallImg3: "../images/pots/ph3.png"
+      },
   },
   plants: {
     // Add plant products here
