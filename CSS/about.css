@@ -227,13 +227,15 @@ section{
 .img1-box{
     background-color:#F0FCF3;
     flex: 1;
+    height: 100%;
+    width: 100%;
     
 }
 .img1-box>img{
-   margin-top:1rem ;
-    width:18rem;
-    height: 36rem;
+    height: 100%;
+    width: 100%;
     margin-left: 2rem;
+    
 }
 .wall{
     position: absolute;
@@ -333,11 +335,12 @@ footer {
     padding: 20px 0;
     position: relative;
     width: 100%;
+
 }
 
 .footer-container {
     display: flex;
-  
+    
     justify-content: space-evenly;
     font-family: 'Montserrat',Arial, Helvetica, sans-serif;
 }

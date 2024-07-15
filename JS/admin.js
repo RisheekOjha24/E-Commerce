@@ -216,7 +216,7 @@ function showLoggedInState(userName) {
     $("#sign-in-form").css({
         "width": oWidth,
         "height": oHeight,
-        "border-radius": "40px",
+        "border-radius": "10px",
         "text-align": "center",
         "background": "linear-gradient(45deg, #8360c3, #2ebf91)"
     }).animate({

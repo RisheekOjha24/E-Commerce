@@ -186,9 +186,9 @@ padding: 10px;
 
 
 
-/* Styling for form starts here -------------------------------- */
+/*Styling for  Sign up/in form starts here -------------------------------- */
 #sign-up-form h1,#sign-in-form h1{
-    transition: 0.5s;
+    transition: 0.4s;
     font-family:'Montserrat', sans-serif;
     font-weight: bolder;
     word-spacing: 2px;
@@ -199,7 +199,7 @@ padding: 10px;
 
 #logout-btn{
   padding:10px 20px;
-  border-radius: 45px;
+  /* border-radius: 45px; */
   font-weight: bold;
   margin-top: 4rem;
   letter-spacing: 1px;
@@ -219,7 +219,6 @@ section {
   justify-content: center;
   align-items: center;
   padding: 4rem 1rem ;
-  /* padding-top: */
 }
 
 section .container {
@@ -437,7 +436,7 @@ footer {
 
 .footer-container {
   display: flex;
-
+  font-weight: bolder;
   justify-content: space-evenly;
   font-family: 'Montserrat',Arial, Helvetica, sans-serif;
 }

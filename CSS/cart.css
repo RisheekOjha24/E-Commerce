@@ -287,32 +287,30 @@ padding: 10px;
      height:100%;
  }
  .checkout-btn {
-     background-color: #4caf50;
+      background-color:rgba(20, 191, 57, 0.888);
      color: #fff;
      border: none;
      padding: 10px 20px;
-     border-radius: 5px;
      cursor: pointer;
      font-size: 18px;
      margin-top: 20px;
 
  }
  .checkout-btn:hover{
-    background-color:  rgba(58, 150, 61, 0.989)
+    background-color: #259d61;
  }
  .select-all {
      margin-bottom:2rem;
      font-size: 20px;
      font-weight: 700;
-
      
  }
  #select-all{
      width:20px; 
      height:20px;
      margin-left:1rem;
-    position: relative;
-    top:4px;
+     position: relative;
+     top:4px;
  }
 .product-checkbox{
     width: 20px;
@@ -324,30 +322,22 @@ padding: 10px;
 
 #save-cart{
     padding: 10px;
-    border-radius: 20px 10px 40px 20px;
-    
-    color: white;
+    cursor: pointer;
+    color: black;
     font-weight: bold;
-    /* font-family: 'Belanosima'; */
-    border: 2px solid #2b5876;
-    box-shadow: inset 2px 4px 10px rgb(28, 112, 28);
-    background: linear-gradient(45deg,#3da4a7  ,#0cab90);
+    border: 2px solid #bbc0c4;
     font-size: 16px;
     transform: translateX(8rem);
-    transition: 1ms ease-in-out
+    transition: 1ms ease-in-out;
+    background-color:  #f8fcff;
 }
 #save-cart:hover{
-    transform: translateX(8rem) scale(1.02);
-    /* box-shadow: inset 0px 10px 10px #2b5876; */
-    border-color: black;
-    background: linear-gradient(45deg,#2d6a6c  ,#0a7462);
+    background-color:  #eff0f0;
 }
 
 #save-cart:active{
-    transform: translateX(8rem) scale(1);
-    /* box-shadow: inset 0px 10px 10px #2b5876; */
-    border-color: black;
-    background: linear-gradient(45deg,#2d6a6c  ,#0a7462);
+    transform: translateX(8rem) scale(0.98);
+
 }
 
 
